@@ -1,3 +1,4 @@
+// src/pages/Placeholder.jsx
 import { Helmet } from 'react-helmet'
 
 function Placeholder({ title }) {

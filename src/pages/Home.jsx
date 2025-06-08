@@ -1,3 +1,4 @@
+// src/pages/Home.jsx
 import { useTranslation } from 'react-i18next'
 import Hero from '../components/Hero'
 import ServicesGrid from '../components/ServicesGrid'

@@ -1,0 +1,5 @@
+/* Add this to src/styles/globals.css or just remove the import from main.jsx */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

@@ -1,0 +1,71 @@
+{
+  "navigation": {
+    "home": "Strona główna",
+    "about": "O nas",
+    "services": "Usługi",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "hero": {
+      "title": "Witamy w Digicyfr",
+      "subtitle": "Twój zaufany partner w zakresie rozwiązań cyfrowych i tworzenia stron internetowych",
+      "cta": "Rozpocznij"
+    },
+    "services": {
+      "title": "Nasze Usługi",
+      "webDev": {
+        "title": "Tworzenie Stron Internetowych",
+        "description": "Nowoczesne, responsywne strony internetowe zbudowane z wykorzystaniem najnowszych technologii."
+      },
+      "digitalMarketing": {
+        "title": "Marketing Cyfrowy",
+        "description": "Kompleksowe strategie marketingu cyfrowego, które pomogą rozwinąć Twój biznes."
+      },
+      "seo": {
+        "title": "Optymalizacja SEO",
+        "description": "Popraw swoją pozycję w wyszukiwarkach i widoczność online."
+      }
+    }
+  },
+  "about": {
+    "title": "O Digicyfr",
+    "description": "Dowiedz się więcej o naszej firmie, misji i zespole.",
+    "content": "Jesteśmy wiodącą agencją cyfrową specjalizującą się w tworzeniu stron internetowych i rozwiązaniach marketingu cyfrowego."
+  },
+  "services": {
+    "title": "Nasze Usługi",
+    "description": "Odkryj nasze usługi marketingu cyfrowego i tworzenia stron internetowych.",
+    "content": "Oferujemy kompleksowe rozwiązania cyfrowe, które pomogą Twojemu biznesowi rozwijać się online."
+  },
+  "portfolio": {
+    "title": "Nasze Portfolio",
+    "description": "Zobacz nasze najnowsze projekty i historie sukcesu klientów.",
+    "content": "Poznaj nasze portfolio udanych projektów cyfrowych i zadowolonych klientów."
+  },
+  "contact": {
+    "title": "Skontaktuj się z nami",
+    "description": "Skontaktuj się z zespołem Digicyfr.",
+    "content": "Gotowy, aby rozpocząć swoją cyfrową podróż? Skontaktuj się z nami już dziś!",
+    "form": {
+      "name": "Imię",
+      "email": "Email",
+      "message": "Wiadomość",
+      "send": "Wyślij wiadomość"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Przeczytaj nasze najnowsze spostrzeżenia i aktualizacje branżowe.",
+    "content": "Bądź na bieżąco z najnowszymi trendami w marketingu cyfrowym i tworzeniu stron internetowych."
+  },
+  "footer": {
+    "description": "Twój zaufany partner w zakresie rozwiązań cyfrowych i tworzenia stron internetowych.",
+    "quickLinks": "Szybkie Linki",
+    "contactInfo": "Informacje Kontaktowe",
+    "email": "Email: info@digicyfr.com",
+    "phone": "Telefon: +1 (555) 123-4567",
+    "copyright": "© 2024 Digicyfr. Wszystkie prawa zastrzeżone."
+  }
+}

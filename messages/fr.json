@@ -1,0 +1,71 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Bienvenue chez Digicyfr",
+      "subtitle": "Votre partenaire de confiance pour les solutions numériques et le développement web",
+      "cta": "Commencer"
+    },
+    "services": {
+      "title": "Nos Services",
+      "webDev": {
+        "title": "Développement Web",
+        "description": "Sites web modernes et réactifs construits avec les dernières technologies."
+      },
+      "digitalMarketing": {
+        "title": "Marketing Numérique",
+        "description": "Stratégies de marketing numérique complètes pour développer votre entreprise."
+      },
+      "seo": {
+        "title": "Optimisation SEO",
+        "description": "Améliorez votre classement dans les moteurs de recherche et votre visibilité en ligne."
+      }
+    }
+  },
+  "about": {
+    "title": "À Propos de Digicyfr",
+    "description": "Découvrez notre entreprise, notre mission et notre équipe.",
+    "content": "Nous sommes une agence numérique de premier plan spécialisée dans le développement web et les solutions de marketing numérique."
+  },
+  "services": {
+    "title": "Nos Services",
+    "description": "Découvrez nos services de marketing numérique et de développement web.",
+    "content": "Nous offrons des solutions numériques complètes pour aider votre entreprise à croître en ligne."
+  },
+  "portfolio": {
+    "title": "Notre Portfolio",
+    "description": "Découvrez nos derniers projets et nos success stories clients.",
+    "content": "Explorez notre portfolio de projets numériques réussis et de clients satisfaits."
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "description": "Contactez l'équipe Digicyfr.",
+    "content": "Prêt à commencer votre parcours numérique ? Contactez-nous dès aujourd'hui !",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "send": "Envoyer le Message"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Lisez nos dernières analyses et actualités du secteur.",
+    "content": "Restez à jour avec les dernières tendances en marketing numérique et développement web."
+  },
+  "footer": {
+    "description": "Votre partenaire de confiance pour les solutions numériques et le développement web.",
+    "quickLinks": "Liens Rapides",
+    "contactInfo": "Informations de Contact",
+    "email": "Email: info@digicyfr.com",
+    "phone": "Téléphone: +1 (555) 123-4567",
+    "copyright": "© 2024 Digicyfr. Tous droits réservés."
+  }
+}

@@ -1,0 +1,28 @@
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
+import HeroCarousel from '@/components/home/HeroCarousel';
+import ServicesSection from '@/components/home/ServicesSection';
+import PartnersSection from '@/components/home/PartnersSection';
+import ContactSection from '@/components/home/ContactSection';
+import '@/styles/components/homepage.css';
+
+export default async function HomePage({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  return (
+    <div className="homepage">
+      <Header />
+      <main className="main-content">
+        <HeroCarousel />
+        <ServicesSection />
+        <PartnersSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </div>
+  );
+}

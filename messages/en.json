@@ -1,0 +1,71 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to Digicyfr",
+      "subtitle": "Your trusted partner for digital solutions and web development",
+      "cta": "Get Started"
+    },
+    "services": {
+      "title": "Our Services",
+      "webDev": {
+        "title": "Web Development",
+        "description": "Modern, responsive websites built with the latest technologies."
+      },
+      "digitalMarketing": {
+        "title": "Digital Marketing",
+        "description": "Comprehensive digital marketing strategies to grow your business."
+      },
+      "seo": {
+        "title": "SEO Optimization",
+        "description": "Improve your search rankings and online visibility."
+      }
+    }
+  },
+  "about": {
+    "title": "About Digicyfr",
+    "description": "Learn more about our company, mission, and team.",
+    "content": "We are a leading digital agency specializing in web development and digital marketing solutions."
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Discover our digital marketing and web development services.",
+    "content": "We offer comprehensive digital solutions to help your business grow online."
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "description": "Check out our latest projects and client success stories.",
+    "content": "Explore our portfolio of successful digital projects and satisfied clients."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with the Digicyfr team.",
+    "content": "Ready to start your digital journey? Contact us today!",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Read our latest insights and industry updates.",
+    "content": "Stay updated with the latest trends in digital marketing and web development."
+  },
+  "footer": {
+    "description": "Your trusted partner for digital solutions and web development.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "email": "Email: info@digicyfr.com",
+    "phone": "Phone: +1 (555) 123-4567",
+    "copyright": "© 2024 Digicyfr. All rights reserved."
+  }
+}

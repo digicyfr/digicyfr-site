@@ -67,10 +67,10 @@ export default function Header() {
           }}
         >
           <img 
-            src="/images/logo/digicyfr-logo.png" 
+            src="/logo/digicyfr-logo.png" 
             alt="Digicyfr - Digital Solutions"
             style={{
-              height: '40px',
+              height: '65px',
               width: 'auto',
               maxWidth: '150px'
             }}
@@ -211,7 +211,7 @@ export default function Header() {
                 justifyContent: 'center'
               }}
             >
-              <span style={{ fontSize: '1.1rem' }}>{currentLocale?.flag || '🇺🇸'}</span>
+              <span className="dropdown-flag">{currentLocale?.flag || '🇺🇸'}</span>
               <span style={{ fontSize: '0.8rem', fontWeight: 'bold' }}>
                 {(currentLocale?.code || 'en').toUpperCase()}
               </span>

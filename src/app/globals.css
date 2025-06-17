@@ -145,6 +145,11 @@ img {
   animation: spin 1s linear infinite;
 }
 
+/* Dropdown styles */
+.dropdown-flag {
+  font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', 'Arial', sans-serif;
+}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }

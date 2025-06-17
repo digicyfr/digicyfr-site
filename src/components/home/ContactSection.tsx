@@ -138,7 +138,7 @@ export default function ContactSection() {
             </div>
 
             <div className="why-choose-us">
-              <h4 className="why-choose-title">Why Choose {process.env.NEXT_PUBLIC_COMPANY_NAME}?</h4>
+              <h4 className="why-choose-title">Why Choose Digicyfr ?</h4>
               <div className="why-choose-list">
                 {whyChooseUs.map((item, index) => (
                   <div key={index} className="why-choose-item">
@@ -186,7 +186,7 @@ export default function ContactSection() {
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="form-input"
                   disabled={isLoading}
-                  placeholder="your.email@example.com"
+                  placeholder="example@digicyfr.com"
                 />
               </div>
 

@@ -3,42 +3,42 @@
 const clients = [
   { 
     name: "Kwiaciarnia Miłość", 
-    logo: "https://kwiaciarniamilosc.pl/wp-content/uploads/2025/02/Untitled-design-14-e1749305620417.png", 
+    logo: "/partners/kwiaciarnia-milosc.png",    
     emoji: "🌸",
     industry: "Florist Shop",
     website: "https://kwiaciarniamilosc.pl"
   },
   { 
     name: "Kebab SuperKing", 
-    logo: "https://kebabsuperking.com/images/logo.png", 
+    logo: "/partners/kebab-superking.png", 
     emoji: "🥙",
     industry: "Restaurant",
     website: "www.kebabsuperking.com"
   },
   { 
     name: "Kebab Gold", 
-    logo: "https://kebabsuperking.com/images/kebab-gold.jpg", 
+    logo: "/partners/kebab-gold.png", 
     emoji: "👑",
-    industry: "Fast Food",
+    industry: "Restaurant",
     website: "https://kebabsuperking.com/kebab-gold"
   },
   { 
     name: "Kebab Saad", 
-    logo: "https://kebabsuperking.com/images/kebab-saad.jpg", 
+    logo: "/partners/kebab-saad.png", 
     emoji: "🍖",
     industry: "Restaurant",
     website: "https://kebabsuperking.com/kebab-saad"
   },
   { 
     name: "Art Kebab", 
-    logo: "https://kebabsuperking.com/images/art-kebab.jpg", 
+    logo: "/partners/art-kebab.jpg", 
     emoji: "🍖",
     industry: "Restaurant",
     website: "https://kebabsuperking.com/art-kebab"
   },
   { 
     name: "OceanPro", 
-    logo: "https://www.theoceanpro.com/images/logo.png", 
+    logo: "/partners/oceanpro.png", 
     emoji: "🌊",
     industry: "Import Export Services",
     website: "https://www.theoceanpro.com/"
@@ -46,9 +46,10 @@ const clients = [
 ];
 
 const stats = [
-  { number: "5+", label: "Happy Clients" },
-  { number: "100%", label: "Success Rate" },
+  { number: "5+", label: "Satisfied Customers" },
   { number: "24/7", label: "Support" },
+  { number: "20+", label: "Business Solutions" },
+  { number: "100%", label: "Success Rate" },
   { number: "50%", label: "Better Prices" }
 ];
 

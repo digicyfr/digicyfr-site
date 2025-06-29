@@ -112,18 +112,13 @@ export default function Header() {
             flexShrink: 0
           }}
         >
-<<<<<<< HEAD
           <Image 
             src="/images/logo/digicyfr-logo.png" 
-=======
-          <img 
-            src="/logo/digicyfr-logo.png" 
->>>>>>> fd65794198a02fcae1bf6b565d1bc9475f572bc5
             alt="Digicyfr - Digital Solutions"
             width={150}
             height={40}
             style={{
-              height: '65px',
+              height: '40px',
               width: 'auto',
               maxWidth: '150px'
             }}
@@ -160,7 +155,7 @@ export default function Header() {
               onClick={() => setIsLangOpen(!isLangOpen)}
               style={langButtonStyle}
             >
-              <span className="dropdown-flag">{currentLocale?.flag || '🇺🇸'}</span>
+              <span style={{ fontSize: '1.1rem' }}>{currentLocale?.flag || '🇺🇸'}</span>
               <span style={{ fontSize: '0.8rem', fontWeight: 'bold' }}>
                 {(currentLocale?.code || 'en').toUpperCase()}
               </span>

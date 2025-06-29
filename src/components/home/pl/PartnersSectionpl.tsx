@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 const clients = [
   { 
@@ -131,13 +132,17 @@ export default function PartnersSectionPl() {
                 border: '2px solid #e5e7eb'
               }}>
                 {/* Try to show image first */}
-                <img 
+                <Image 
                   src={client.logo}
+                  width={90}
+                  height={70}
                   alt={`${client.name} logo`}
                   style={{
                     maxWidth: '90px',
                     maxHeight: '70px',
                     objectFit: 'contain',
+                    width: 'auto',
+                    height: 'auto',
                     display: 'block'
                   }}
                   onError={(e) => {

@@ -48,11 +48,11 @@ export default function ContactSectionDe() {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('EmailJS Error:', error);
       setStatus('error');
-      if (error.text) {
-        console.error('Error details:', error.text);
+      if (error && typeof error === 'object' && 'text' in error) {
+        console.error('Error details:', (error as { text: string }).text);
       }
     } finally {
       setIsLoading(false);

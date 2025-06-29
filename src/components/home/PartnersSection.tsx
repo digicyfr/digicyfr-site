@@ -4,42 +4,42 @@ import Image from 'next/image';
 const clients = [
   { 
     name: "Kwiaciarnia Miłość", 
-    logo: "/partners/kwiaciarnia-milosc.png",    
+    logo: "https://kwiaciarniamilosc.pl/wp-content/uploads/2025/02/Untitled-design-14-e1749305620417.png", 
     emoji: "🌸",
     industry: "Florist Shop",
     website: "https://kwiaciarniamilosc.pl"
   },
   { 
     name: "Kebab SuperKing", 
-    logo: "/partners/kebab-superking.png", 
+    logo: "https://kebabsuperking.com/images/logo.png", 
     emoji: "🥙",
     industry: "Restaurant",
     website: "www.kebabsuperking.com"
   },
   { 
     name: "Kebab Gold", 
-    logo: "/partners/kebab-gold.png", 
+    logo: "https://kebabsuperking.com/images/kebab-gold.jpg", 
     emoji: "👑",
-    industry: "Restaurant",
+    industry: "Fast Food",
     website: "https://kebabsuperking.com/kebab-gold"
   },
   { 
     name: "Kebab Saad", 
-    logo: "/partners/kebab-saad.png", 
+    logo: "https://kebabsuperking.com/images/kebab-saad.jpg", 
     emoji: "🍖",
     industry: "Restaurant",
     website: "https://kebabsuperking.com/kebab-saad"
   },
   { 
     name: "Art Kebab", 
-    logo: "/partners/art-kebab.jpg", 
+    logo: "https://kebabsuperking.com/images/art-kebab.jpg", 
     emoji: "🍖",
     industry: "Restaurant",
     website: "https://kebabsuperking.com/art-kebab"
   },
   { 
     name: "OceanPro", 
-    logo: "/partners/oceanpro.png", 
+    logo: "https://www.theoceanpro.com/images/logo.png", 
     emoji: "🌊",
     industry: "Import Export Services",
     website: "https://www.theoceanpro.com/"
@@ -47,18 +47,10 @@ const clients = [
 ];
 
 const stats = [
-<<<<<<< HEAD
   { number: "5+", label: "Happy Clients" },
   { number: "50+", label: "Location" },
   { number: "100%", label: "Success Rate" },
   { number: "24/7", label: "Support" }
-=======
-  { number: "5+", label: "Satisfied Customers" },
-  { number: "24/7", label: "Support" },
-  { number: "20+", label: "Business Solutions" },
-  { number: "100%", label: "Success Rate" },
-  { number: "50%", label: "Better Prices" }
->>>>>>> fd65794198a02fcae1bf6b565d1bc9475f572bc5
 ];
 
 export default function PartnersSection() {
@@ -150,7 +142,7 @@ export default function PartnersSection() {
                     maxHeight: '70px',
                     objectFit: 'contain',
                     width: 'auto',
-                    height: 'auto'
+                    height: 'auto',
                   }}
                   onError={(e) => {
                     // Hide image and show emoji fallback

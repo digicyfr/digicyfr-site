@@ -1,67 +1,59 @@
 'use client';
-import Image from 'next/image';
 
 const clients = [
   { 
     name: "Kwiaciarnia Miłość", 
     logo: "/partners/kwiaciarnia-milosc.png",    
     emoji: "🌸",
-    industry: "Florist Shop",
+    industry: "Kwiaciarnia",
     website: "https://kwiaciarniamilosc.pl"
   },
   { 
     name: "Kebab SuperKing", 
     logo: "/partners/kebab-superking.png", 
     emoji: "🥙",
-    industry: "Restaurant",
+    industry: "Restauracja",
     website: "www.kebabsuperking.com"
   },
   { 
     name: "Kebab Gold", 
     logo: "/partners/kebab-gold.png", 
     emoji: "👑",
-    industry: "Restaurant",
+    industry: "Restauracja",
     website: "https://kebabsuperking.com/kebab-gold"
   },
   { 
     name: "Kebab Saad", 
     logo: "/partners/kebab-saad.png", 
     emoji: "🍖",
-    industry: "Restaurant",
+    industry: "Restauracja",
     website: "https://kebabsuperking.com/kebab-saad"
   },
   { 
     name: "Art Kebab", 
     logo: "/partners/art-kebab.jpg", 
     emoji: "🍖",
-    industry: "Restaurant",
+    industry: "Restauracja",
     website: "https://kebabsuperking.com/art-kebab"
   },
   { 
     name: "OceanPro", 
     logo: "/partners/oceanpro.png", 
     emoji: "🌊",
-    industry: "Import Export Services",
+    industry: "Usługi importu i eksportu",
     website: "https://www.theoceanpro.com/"
   }
 ];
 
 const stats = [
-<<<<<<< HEAD
-  { number: "5+", label: "Happy Clients" },
-  { number: "50+", label: "Location" },
-  { number: "100%", label: "Success Rate" },
-  { number: "24/7", label: "Support" }
-=======
-  { number: "5+", label: "Satisfied Customers" },
-  { number: "24/7", label: "Support" },
-  { number: "20+", label: "Business Solutions" },
-  { number: "100%", label: "Success Rate" },
-  { number: "50%", label: "Better Prices" }
->>>>>>> fd65794198a02fcae1bf6b565d1bc9475f572bc5
+  { number: "5+", label: "Zadowoleni klienci" },
+  { number: "24/7", label: "Wsparcie" },
+  { number: "20+", label: "Rozwiązania biznesowe" },
+  { number: "100%", label: "Wskaźnik sukcesu" },
+  { number: "50%", label: "Lepsze ceny" }
 ];
 
-export default function PartnersSection() {
+export default function PartnersSectionPl() {
   return (
     <section 
       id="partners" 
@@ -84,7 +76,7 @@ export default function PartnersSection() {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}>
-            Our Trusted Clients
+            Nasi zaufani klienci
           </h2>
           <p style={{
             fontSize: '1.1rem',
@@ -93,7 +85,7 @@ export default function PartnersSection() {
             margin: '0 auto',
             lineHeight: '1.6'
           }}>
-            Businesses that trust Digicyfr to boost their online presence and sales
+            Firmy, które zaufały Digicyfr w zwiększaniu swojej obecności online i sprzedaży
           </p>
         </div>
         
@@ -136,21 +128,17 @@ export default function PartnersSection() {
                 justifyContent: 'center',
                 background: '#f9fafb',
                 borderRadius: '0.5rem',
-                border: '2px solid #e5e7eb',
-                position: 'relative'
+                border: '2px solid #e5e7eb'
               }}>
-                {/* Next.js Image component */}
-                <Image 
+                {/* Try to show image first */}
+                <img 
                   src={client.logo}
                   alt={`${client.name} logo`}
-                  width={90}
-                  height={70}
                   style={{
                     maxWidth: '90px',
                     maxHeight: '70px',
                     objectFit: 'contain',
-                    width: 'auto',
-                    height: 'auto'
+                    display: 'block'
                   }}
                   onError={(e) => {
                     // Hide image and show emoji fallback
@@ -162,8 +150,7 @@ export default function PartnersSection() {
                 {/* Emoji fallback */}
                 <div style={{
                   fontSize: '3rem',
-                  display: 'none',
-                  position: 'absolute'
+                  display: 'none'
                 }}>
                   {client.emoji}
                 </div>

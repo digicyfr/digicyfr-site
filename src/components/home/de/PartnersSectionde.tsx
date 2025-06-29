@@ -1,12 +1,11 @@
 'use client';
-import Image from 'next/image';
 
 const clients = [
   { 
     name: "Kwiaciarnia Miłość", 
     logo: "/partners/kwiaciarnia-milosc.png",    
     emoji: "🌸",
-    industry: "Florist Shop",
+    industry: "Blumenladen",
     website: "https://kwiaciarniamilosc.pl"
   },
   { 
@@ -41,27 +40,20 @@ const clients = [
     name: "OceanPro", 
     logo: "/partners/oceanpro.png", 
     emoji: "🌊",
-    industry: "Import Export Services",
+    industry: "Import-Export-Dienstleistungen",
     website: "https://www.theoceanpro.com/"
   }
 ];
 
 const stats = [
-<<<<<<< HEAD
-  { number: "5+", label: "Happy Clients" },
-  { number: "50+", label: "Location" },
-  { number: "100%", label: "Success Rate" },
-  { number: "24/7", label: "Support" }
-=======
-  { number: "5+", label: "Satisfied Customers" },
+  { number: "5+", label: "Zufriedene Kunden" },
   { number: "24/7", label: "Support" },
-  { number: "20+", label: "Business Solutions" },
-  { number: "100%", label: "Success Rate" },
-  { number: "50%", label: "Better Prices" }
->>>>>>> fd65794198a02fcae1bf6b565d1bc9475f572bc5
+  { number: "20+", label: "Geschäftslösungen" },
+  { number: "100%", label: "Erfolgsquote" },
+  { number: "50%", label: "Bessere Preise" }
 ];
 
-export default function PartnersSection() {
+export default function PartnersSectionDe() {
   return (
     <section 
       id="partners" 
@@ -84,7 +76,7 @@ export default function PartnersSection() {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}>
-            Our Trusted Clients
+            Unsere vertrauenswürdigen Kunden
           </h2>
           <p style={{
             fontSize: '1.1rem',
@@ -93,7 +85,7 @@ export default function PartnersSection() {
             margin: '0 auto',
             lineHeight: '1.6'
           }}>
-            Businesses that trust Digicyfr to boost their online presence and sales
+            Unternehmen, die Digicyfr vertrauen, um ihre Online-Präsenz und ihren Umsatz zu steigern
           </p>
         </div>
         
@@ -136,21 +128,17 @@ export default function PartnersSection() {
                 justifyContent: 'center',
                 background: '#f9fafb',
                 borderRadius: '0.5rem',
-                border: '2px solid #e5e7eb',
-                position: 'relative'
+                border: '2px solid #e5e7eb'
               }}>
-                {/* Next.js Image component */}
-                <Image 
+                {/* Try to show image first */}
+                <img 
                   src={client.logo}
                   alt={`${client.name} logo`}
-                  width={90}
-                  height={70}
                   style={{
                     maxWidth: '90px',
                     maxHeight: '70px',
                     objectFit: 'contain',
-                    width: 'auto',
-                    height: 'auto'
+                    display: 'block'
                   }}
                   onError={(e) => {
                     // Hide image and show emoji fallback
@@ -162,8 +150,7 @@ export default function PartnersSection() {
                 {/* Emoji fallback */}
                 <div style={{
                   fontSize: '3rem',
-                  display: 'none',
-                  position: 'absolute'
+                  display: 'none'
                 }}>
                   {client.emoji}
                 </div>

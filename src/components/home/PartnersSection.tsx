@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 const clients = [
   { 
@@ -47,9 +48,9 @@ const clients = [
 
 const stats = [
   { number: "5+", label: "Happy Clients" },
+  { number: "50+", label: "Location" },
   { number: "100%", label: "Success Rate" },
-  { number: "24/7", label: "Support" },
-  { number: "50%", label: "Better Prices" }
+  { number: "24/7", label: "Support" }
 ];
 
 export default function PartnersSection() {
@@ -127,17 +128,21 @@ export default function PartnersSection() {
                 justifyContent: 'center',
                 background: '#f9fafb',
                 borderRadius: '0.5rem',
-                border: '2px solid #e5e7eb'
+                border: '2px solid #e5e7eb',
+                position: 'relative'
               }}>
-                {/* Try to show image first */}
-                <img 
+                {/* Next.js Image component */}
+                <Image 
                   src={client.logo}
                   alt={`${client.name} logo`}
+                  width={90}
+                  height={70}
                   style={{
                     maxWidth: '90px',
                     maxHeight: '70px',
                     objectFit: 'contain',
-                    display: 'block'
+                    width: 'auto',
+                    height: 'auto'
                   }}
                   onError={(e) => {
                     // Hide image and show emoji fallback
@@ -149,7 +154,8 @@ export default function PartnersSection() {
                 {/* Emoji fallback */}
                 <div style={{
                   fontSize: '3rem',
-                  display: 'none'
+                  display: 'none',
+                  position: 'absolute'
                 }}>
                   {client.emoji}
                 </div>

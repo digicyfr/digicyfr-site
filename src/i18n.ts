@@ -1,13 +1,14 @@
 import { notFound } from 'next/navigation';
-import { getRequestConfig } from 'next-intl/server';
 
-export const locales = ['en', 'pl', 'de', 'fr'] as const;
-export const defaultLocale = 'en' as const;
+export const locales = ['en', 'pl', 'de', 'fr'];
+export const defaultLocale = 'en';
 
-export default getRequestConfig(async ({ locale }) => {
-  if (!locales.includes(locale as any)) notFound();
+export function isValidLocale(locale: string): boolean {
+  return locales.includes(locale);
+}
 
-  return {
-    messages: {}
-  };
-});
+export function validateLocale(locale: string): void {
+  if (!isValidLocale(locale)) {
+    notFound();
+  }
+}

@@ -1,5 +1,3 @@
-// Fixed src/components/home/ContactSection.tsx
-
 'use client';
 import { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Star, ArrowRight } from 'lucide-react';
@@ -54,13 +52,13 @@ export default function ContactSection() {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('EmailJS Error:', error);
       setStatus('error');
       
       // Log detailed error for debugging
-      if (error.text) {
-        console.error('Error details:', error.text);
+      if (error && typeof error === 'object' && 'text' in error) {
+        console.error('Error details:', (error as { text: string }).text);
       }
     } finally {
       setIsLoading(false);
@@ -155,7 +153,7 @@ export default function ContactSection() {
               {/* Status Messages */}
               {status === 'success' && (
                 <div className="form-status success">
-                  ✅ Message sent successfully! We'll contact you soon.
+                  ✅ Message sent successfully! We&apos;ll contact you soon.
                 </div>
               )}
               {status === 'error' && (

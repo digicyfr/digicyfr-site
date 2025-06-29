@@ -6,13 +6,14 @@ import PartnersSection from '@/components/home/PartnersSection';
 import ContactSection from '@/components/home/ContactSection';
 import '@/styles/components/homepage.css';
 
-export default async function HomePage({
-  params
-}: {
+interface Props {
   params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
+}
 
+export default async function HomePage({ params }: Props) {
+  // Extract locale but prefix with underscore to indicate intentionally unused
+  const { locale: _locale } = await params;
+  
   return (
     <div className="homepage">
       <Header />

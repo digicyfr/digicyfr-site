@@ -1,10 +1,9 @@
-// Fixed src/components/common/Header.tsx
-
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const locales = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -17,8 +16,50 @@ export default function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-  // Get current locale from URL path
+  // Handle hydration and window resize
+  useEffect(() => {
+    setMounted(true);
+    
+    const handleResize = () => {
+      if (typeof window !== 'undefined') {
+        setIsMobile(window.innerWidth <= 768);
+      }
+    };
+
+    // Initial check after component mounts
+    handleResize();
+    
+    // Add event listener
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
+    }
+    
+    // Cleanup
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
+    };
+  }, []);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('[data-language-dropdown]')) {
+        setIsLangOpen(false);
+      }
+    };
+
+    if (typeof document !== 'undefined') {
+      document.addEventListener('click', handleClickOutside);
+      return () => document.removeEventListener('click', handleClickOutside);
+    }
+  }, []);
+
   const getCurrentLocale = () => {
     const segments = pathname.split('/');
     const localeFromPath = segments[1];
@@ -34,6 +75,11 @@ export default function Header() {
   };
 
   const currentLocale = locales.find(l => l.code === locale);
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <header style={{
@@ -56,7 +102,7 @@ export default function Header() {
         alignItems: 'center',
         gap: '1rem'
       }}>
-        {/* Logo - REPLACE TEXT WITH IMAGE */}
+        {/* Logo */}
         <Link 
           href={`/${locale}`} 
           style={{
@@ -66,16 +112,17 @@ export default function Header() {
             flexShrink: 0
           }}
         >
-          <img 
+          <Image 
             src="/images/logo/digicyfr-logo.png" 
             alt="Digicyfr - Digital Solutions"
+            width={150}
+            height={40}
             style={{
               height: '40px',
               width: 'auto',
               maxWidth: '150px'
             }}
           />
-          {/* Fallback text if image doesn't load */}
           <span style={{
             fontSize: '1.5rem',
             fontWeight: 'bold',
@@ -83,133 +130,30 @@ export default function Header() {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             marginLeft: '0.5rem',
-            display: 'none' // Show only if image fails
+            display: isMobile ? 'none' : 'inline'
           }}>
             Digicyfr
           </span>
         </Link>
-        
-        {/* Desktop Navigation - FIXED SPACING */}
+
+        {/* Desktop Navigation */}
         <div style={{ 
-          display: 'flex',
+          display: isMobile ? 'none' : 'flex',
           gap: '2rem',
-          alignItems: 'center',
-          '@media (max-width: 768px)': { display: 'none' }
+          alignItems: 'center'
         }}>
-          <a 
-            href="#home" 
-            style={{ 
-              textDecoration: 'none', 
-              color: '#374151', 
-              fontWeight: '500',
-              padding: '0.5rem 0',
-              borderBottom: '2px solid transparent',
-              transition: 'all 0.3s'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.color = '#3b82f6';
-              e.currentTarget.style.borderBottomColor = '#3b82f6';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.color = '#374151';
-              e.currentTarget.style.borderBottomColor = 'transparent';
-            }}
-          >
-            Home
-          </a>
-          <a 
-            href="#services" 
-            style={{ 
-              textDecoration: 'none', 
-              color: '#374151', 
-              fontWeight: '500',
-              padding: '0.5rem 0',
-              borderBottom: '2px solid transparent',
-              transition: 'all 0.3s'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.color = '#3b82f6';
-              e.currentTarget.style.borderBottomColor = '#3b82f6';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.color = '#374151';
-              e.currentTarget.style.borderBottomColor = 'transparent';
-            }}
-          >
-            Services
-          </a>
-          <a 
-            href="#partners" 
-            style={{ 
-              textDecoration: 'none', 
-              color: '#374151', 
-              fontWeight: '500',
-              padding: '0.5rem 0',
-              borderBottom: '2px solid transparent',
-              transition: 'all 0.3s'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.color = '#3b82f6';
-              e.currentTarget.style.borderBottomColor = '#3b82f6';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.color = '#374151';
-              e.currentTarget.style.borderBottomColor = 'transparent';
-            }}
-          >
-            Partners
-          </a>
-          <a 
-            href="#contact" 
-            style={{ 
-              textDecoration: 'none', 
-              color: '#374151', 
-              fontWeight: '500',
-              padding: '0.5rem 0',
-              borderBottom: '2px solid transparent',
-              transition: 'all 0.3s'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.color = '#3b82f6';
-              e.currentTarget.style.borderBottomColor = '#3b82f6';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.color = '#374151';
-              e.currentTarget.style.borderBottomColor = 'transparent';
-            }}
-          >
-            Contact
-          </a>
+          <a href="#home" style={navLinkStyle}>Home</a>
+          <a href="#services" style={navLinkStyle}>Services</a>
+          <a href="#partners" style={navLinkStyle}>Partners</a>
+          <a href="#contact" style={navLinkStyle}>Contact</a>
         </div>
 
-        {/* Right Side: Language + Mobile Menu */}
-        <div style={{ 
-          display: 'flex', 
-          alignItems: 'center', 
-          gap: '1rem',
-          flexShrink: 0 
-        }}>
-          
-          {/* Language Switcher */}
-          <div style={{ position: 'relative' }}>
+        {/* Language Switcher + Mobile Toggle */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <div style={{ position: 'relative' }} data-language-dropdown>
             <button
               onClick={() => setIsLangOpen(!isLangOpen)}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                padding: '0.5rem 1rem',
-                border: '2px solid #3b82f6',
-                borderRadius: '0.5rem',
-                background: 'white',
-                cursor: 'pointer',
-                fontSize: '0.9rem',
-                fontWeight: '600',
-                color: '#3b82f6',
-                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-                minWidth: '80px',
-                justifyContent: 'center'
-              }}
+              style={langButtonStyle}
             >
               <span style={{ fontSize: '1.1rem' }}>{currentLocale?.flag || '🇺🇸'}</span>
               <span style={{ fontSize: '0.8rem', fontWeight: 'bold' }}>
@@ -221,21 +165,8 @@ export default function Header() {
               }} />
             </button>
 
-            {/* Language Dropdown */}
             {isLangOpen && (
-              <div style={{
-                position: 'absolute',
-                right: 0,
-                top: '100%',
-                marginTop: '0.5rem',
-                background: 'white',
-                border: '2px solid #3b82f6',
-                borderRadius: '0.5rem',
-                boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)',
-                minWidth: '180px',
-                zIndex: 1000,
-                overflow: 'hidden'
-              }}>
+              <div style={langDropdownStyle}>
                 {locales.map((loc) => (
                   <Link
                     key={loc.code}
@@ -250,11 +181,19 @@ export default function Header() {
                       color: '#374151',
                       fontSize: '0.9rem',
                       borderBottom: loc.code === locales[locales.length - 1].code ? 'none' : '1px solid #f3f4f6',
-                      transition: 'background-color 0.2s',
-                      backgroundColor: loc.code === locale ? '#f0f9ff' : 'white'
+                      backgroundColor: loc.code === locale ? '#f0f9ff' : 'white',
+                      transition: 'background-color 0.2s'
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f9fafb'}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = loc.code === locale ? '#f0f9ff' : 'white'}
+                    onMouseEnter={(e) => {
+                      if (loc.code !== locale) {
+                        (e.target as HTMLElement).style.backgroundColor = '#f9fafb';
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (loc.code !== locale) {
+                        (e.target as HTMLElement).style.backgroundColor = 'white';
+                      }
+                    }}
                   >
                     <span style={{ fontSize: '1.1rem' }}>{loc.flag}</span>
                     <span style={{ fontWeight: loc.code === locale ? '600' : '400' }}>{loc.name}</span>
@@ -267,17 +206,26 @@ export default function Header() {
             )}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Only shows on mobile */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             style={{
-              display: window.innerWidth <= 768 ? 'block' : 'none',
+              display: isMobile ? 'block' : 'none',
               background: 'none',
               border: '1px solid #e5e7eb',
               borderRadius: '0.5rem',
               cursor: 'pointer',
               padding: '0.5rem',
-              color: '#374151'
+              color: '#374151',
+              transition: 'all 0.2s'
+            }}
+            onMouseEnter={(e) => {
+              (e.target as HTMLElement).style.backgroundColor = '#f9fafb';
+              (e.target as HTMLElement).style.borderColor = '#d1d5db';
+            }}
+            onMouseLeave={(e) => {
+              (e.target as HTMLElement).style.backgroundColor = 'transparent';
+              (e.target as HTMLElement).style.borderColor = '#e5e7eb';
             }}
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -285,75 +233,121 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Mobile Navigation - IMPROVED */}
-      {isMenuOpen && (
+      {/* Mobile Menu */}
+      {isMobile && isMenuOpen && (
         <div style={{
           background: 'white',
           borderTop: '1px solid rgba(0, 0, 0, 0.1)',
           padding: '1rem',
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+          animation: 'slideDown 0.3s ease-out'
         }}>
           <div style={{ 
             display: 'flex', 
             flexDirection: 'column', 
-            gap: '1rem',
+            gap: '0.5rem',
             maxWidth: '1200px',
             margin: '0 auto'
           }}>
             <a 
               href="#home" 
-              onClick={() => setIsMenuOpen(false)}
-              style={{ 
-                textDecoration: 'none', 
-                color: '#374151', 
-                fontWeight: '500',
-                padding: '0.75rem 0',
-                borderBottom: '1px solid #f3f4f6'
-              }}
+              onClick={() => setIsMenuOpen(false)} 
+              style={mobileLinkStyle}
             >
               🏠 Home
             </a>
             <a 
               href="#services" 
-              onClick={() => setIsMenuOpen(false)}
-              style={{ 
-                textDecoration: 'none', 
-                color: '#374151', 
-                fontWeight: '500',
-                padding: '0.75rem 0',
-                borderBottom: '1px solid #f3f4f6'
-              }}
+              onClick={() => setIsMenuOpen(false)} 
+              style={mobileLinkStyle}
             >
               🛠️ Services
             </a>
             <a 
               href="#partners" 
-              onClick={() => setIsMenuOpen(false)}
-              style={{ 
-                textDecoration: 'none', 
-                color: '#374151', 
-                fontWeight: '500',
-                padding: '0.75rem 0',
-                borderBottom: '1px solid #f3f4f6'
-              }}
+              onClick={() => setIsMenuOpen(false)} 
+              style={mobileLinkStyle}
             >
               🤝 Partners
             </a>
             <a 
               href="#contact" 
-              onClick={() => setIsMenuOpen(false)}
-              style={{ 
-                textDecoration: 'none', 
-                color: '#374151', 
-                fontWeight: '500',
-                padding: '0.75rem 0'
-              }}
+              onClick={() => setIsMenuOpen(false)} 
+              style={mobileLinkStyle}
             >
               📞 Contact
             </a>
           </div>
         </div>
       )}
+
+      <style jsx>{`
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </header>
   );
 }
+
+const navLinkStyle = {
+  textDecoration: 'none',
+  color: '#374151',
+  fontWeight: '500' as const,
+  padding: '0.5rem 0',
+  borderBottom: '2px solid transparent',
+  transition: 'all 0.3s',
+  cursor: 'pointer'
+};
+
+const langButtonStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '0.5rem',
+  padding: '0.5rem 1rem',
+  border: '2px solid #3b82f6',
+  borderRadius: '0.5rem',
+  background: 'white',
+  cursor: 'pointer',
+  fontSize: '0.9rem',
+  fontWeight: '600' as const,
+  color: '#3b82f6',
+  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+  minWidth: '80px',
+  justifyContent: 'center' as const,
+  transition: 'all 0.2s'
+};
+
+const langDropdownStyle = {
+  position: 'absolute' as const,
+  right: 0,
+  top: '100%',
+  marginTop: '0.5rem',
+  background: 'white',
+  border: '2px solid #3b82f6',
+  borderRadius: '0.5rem',
+  boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)',
+  minWidth: '180px',
+  zIndex: 1000,
+  overflow: 'hidden' as const,
+  animation: 'slideDown 0.2s ease-out'
+};
+
+const mobileLinkStyle = {
+  textDecoration: 'none',
+  color: '#374151',
+  fontWeight: '500' as const,
+  padding: '0.75rem 0',
+  borderBottom: '1px solid #f3f4f6',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '0.5rem',
+  transition: 'color 0.2s'
+};

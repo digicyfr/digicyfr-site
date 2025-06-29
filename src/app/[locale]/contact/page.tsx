@@ -1,31 +1,22 @@
-//src/app/[locale]/contact/page.tsx
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
+import ContactSection from '@/components/home/ContactSection';
 
-'use client';
-import { useTranslations } from 'next-intl';
+interface Props {
+  params: Promise<{ locale: string }>;
+}
 
-export default function ContactPage() {
-  const t = useTranslations('contact');
-
+export default async function ContactPage({ params }: Props) {
+  // Extract locale but prefix with underscore to indicate intentionally unused
+  const { locale: _locale } = await params;
+  
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {t('title')}
-            </h1>
-            <p className="text-xl text-gray-600">
-              {t('description')}
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              {t('content')}
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="contact-page">
+      <Header />
+      <main className="main-content" style={{ paddingTop: '80px' }}>
+        <ContactSection />
+      </main>
+      <Footer />
     </div>
   );
 }

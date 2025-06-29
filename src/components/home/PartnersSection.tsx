@@ -142,7 +142,7 @@ export default function PartnersSection() {
                     maxHeight: '70px',
                     objectFit: 'contain',
                     width: 'auto',
-                    height: 'auto',
+                    height: 'auto',,
                   }}
                   onError={(e) => {
                     // Hide image and show emoji fallback

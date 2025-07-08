@@ -142,7 +142,7 @@ export default function PartnersSectionFr() {
                     maxHeight: '70px',
                     objectFit: 'contain',
                     width: 'auto',
-                    height: 'auto',,
+                    height: 'auto',
                     display: 'block'
                   }}
                   onError={(e) => {

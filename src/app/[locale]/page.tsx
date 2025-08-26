@@ -2,6 +2,7 @@ import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import HeroCarousel from '@/components/home/HeroCarousel';
 import ServicesSection from '@/components/home/ServicesSection';
+import ManagementSection from '@/components/home/ManagementSection';
 import PartnersSection from '@/components/home/PartnersSection';
 import ContactSection from '@/components/home/ContactSection';
 import '@/styles/components/homepage.css';
@@ -20,6 +21,7 @@ export default async function HomePage({ params }: Props) {
       <main className="main-content">
         <HeroCarousel />
         <ServicesSection />
+        <ManagementSection />
         <PartnersSection />
         <ContactSection />
       </main>

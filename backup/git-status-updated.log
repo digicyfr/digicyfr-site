@@ -1,0 +1,33 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+	modified:   messages/de.json
+	modified:   messages/en.json
+	modified:   messages/fr.json
+	modified:   messages/pl.json
+	modified:   src/app/[locale]/layout.tsx
+	modified:   src/app/[locale]/page.tsx
+	modified:   src/components/LanguageSwitcher.tsx
+	modified:   src/components/common/Footer.tsx
+	modified:   src/components/common/Header.tsx
+	modified:   src/components/home/ContactSection.tsx
+	modified:   src/components/home/HeroCarousel.tsx
+	modified:   src/components/home/PartnersSection.tsx
+	modified:   src/components/home/ServicesSection.tsx
+	modified:   src/i18n.ts
+	modified:   src/middleware.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	WEBSITE_ANALYSIS.md
+	backup/
+	claude.json
+	public/partners/kebab-abdullah.png
+	src/components/home/ManagementSection.tsx
+	src/styles/components/management-section.css
+
+no changes added to commit (use "git add" and/or "git commit -a")

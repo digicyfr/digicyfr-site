@@ -5,13 +5,31 @@
     "services": "Dienstleistungen",
     "portfolio": "Portfolio",
     "blog": "Blog",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "partners": "Partner"
   },
   "home": {
     "hero": {
       "title": "Willkommen bei Digicyfr",
       "subtitle": "Ihr vertrauensvoller Partner für digitale Lösungen und Webentwicklung",
-      "cta": "Loslegen"
+      "cta": "Loslegen",
+      "slides": {
+        "0": {
+          "title": "Steigern Sie Ihre Online-Verkäufe",
+          "subtitle": "Professionelle SEO & Digitales Marketing",
+          "description": "Wir helfen Unternehmen, den Umsatz durch strategische Online-Optimierung und digitale Präsenz zu steigern."
+        },
+        "1": {
+          "title": "Komplette Unternehmenslösungen",
+          "subtitle": "ERP, POS & Lagerverwaltung",
+          "description": "Einrichtung kompletter Online-Systeme für Verkauf, Lager und Unternehmensführung."
+        },
+        "2": {
+          "title": "Professionelle Webentwicklung",
+          "subtitle": "Maßgeschneiderte Websites & Online-Shops",
+          "description": "Erstellen Sie leistungsstarke Websites und E-Commerce-Shops, die Besucher zu Kunden machen."
+        }
+      }
     },
     "services": {
       "title": "Unsere Dienstleistungen",
@@ -36,23 +54,123 @@
   },
   "services": {
     "title": "Unsere Dienstleistungen",
-    "description": "Entdecken Sie unsere digitalen Marketing- und Webentwicklungsdienste.",
-    "content": "Wir bieten umfassende digitale Lösungen, um Ihr Unternehmen online wachsen zu lassen."
+    "description": "Wir helfen Unternehmen dabei, den Umsatz durch umfassende digitale Lösungen zu besseren Preisen zu steigern",
+    "content": "Wir bieten umfassende digitale Lösungen, um Ihr Unternehmen online wachsen zu lassen.",
+    "seo": {
+      "title": "SEO-Optimierung",
+      "description": "Verbessern Sie Ihre Suchmaschinenplatzierung und Online-Sichtbarkeit mit professionellen SEO-Strategien.",
+      "features": {
+        "0": "Keyword-Recherche",
+        "1": "On-Page-SEO",
+        "2": "Technisches SEO",
+        "3": "Lokales SEO"
+      }
+    },
+    "googleBusiness": {
+      "title": "Google Business Management",
+      "description": "Komplette Einrichtung und Verwaltung des Google Business-Profils für lokale Sichtbarkeit.",
+      "features": {
+        "0": "Profil-Einrichtung",
+        "1": "Bewertungs-Management",
+        "2": "Lokale Verzeichnisse",
+        "3": "Karten-Optimierung"
+      }
+    },
+    "webDev": {
+      "title": "Website-Entwicklung",
+      "description": "Professionelle Websites und Online-Shops, die Besucher zu Kunden machen.",
+      "features": {
+        "0": "Responsive Design",
+        "1": "E-Commerce",
+        "2": "CMS-Integration",
+        "3": "Mobile Optimierung"
+      }
+    },
+    "erp": {
+      "title": "ERP & Business-Tools",
+      "description": "Komplette Unternehmensmanagementsysteme für Verkauf, Lager und Betrieb.",
+      "features": {
+        "0": "Verkaufs-Management",
+        "1": "Lager-Kontrolle",
+        "2": "POS-Systeme",
+        "3": "Analytics"
+      }
+    }
   },
   "portfolio": {
     "title": "Unser Portfolio",
     "description": "Schauen Sie sich unsere neuesten Projekte und Kundenerfolge an.",
     "content": "Entdecken Sie unser Portfolio erfolgreicher digitaler Projekte und zufriedener Kunden."
   },
+  "management": {
+    "title": "Verwalten Sie Ihr Geschäft mit Leichtigkeit",
+    "subtitle": "Komplette digitale Lösungen zur Optimierung Ihrer Abläufe und Steigerung der Produktivität",
+    "features": {
+      "dashboard": {
+        "title": "Echtzeit-Dashboard",
+        "description": "Überwachen Sie Ihre Geschäftskennzahlen und KPIs an einem zentralen Ort"
+      },
+      "analytics": {
+        "title": "Erweiterte Analytik",
+        "description": "Erhalten Sie tiefe Einblicke in Ihre Geschäftsleistung mit detaillierten Berichten"
+      },
+      "customers": {
+        "title": "Kundenverwaltung",
+        "description": "Verfolgen Sie Kundeninteraktionen und bauen Sie dauerhafte Beziehungen auf"
+      },
+      "automation": {
+        "title": "Prozessautomatisierung",
+        "description": "Automatisieren Sie sich wiederholende Aufgaben und konzentrieren Sie sich auf das Wachstum Ihres Unternehmens"
+      }
+    },
+    "benefitsTitle": "Warum unsere Management-Lösungen wählen?",
+    "benefits": [
+      "24/7 Echtzeitüberwachung und Warnungen",
+      "Integrierte Zahlungsverarbeitungssysteme",
+      "Unterstützung für Mehrstandort-Unternehmen",
+      "Mobile App für unterwegs Management",
+      "Automatische Bestandsverfolgung",
+      "Umfassende Berichtstools"
+    ],
+    "cta": {
+      "primary": "Kostenlose Testversion starten",
+      "secondary": "Demo vereinbaren"
+    }
+  },
   "contact": {
-    "title": "Kontaktieren Sie uns",
-    "description": "Kontaktieren Sie das Digicyfr-Team.",
+    "title": "Kontaktieren Sie Uns",
+    "description": "Bereit, Ihr Unternehmen zu stärken? Kontaktieren Sie uns für eine kostenlose Beratung",
     "content": "Bereit, Ihre digitale Reise zu beginnen? Kontaktieren Sie uns noch heute!",
+    "info": {
+      "title": "Kontaktinformationen",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "location": "Standort",
+      "locationValue": "Warschau, Polen"
+    },
+    "coverage": {
+      "title": "Service-Abdeckung",
+      "text": "🇵🇱 Polen & 🇪🇺 EU-Länder"
+    },
+    "whyChooseTitle": "Warum Uns Wählen?",
+    "whyChoose": {
+      "0": "Bessere Preise als Konkurrenten",
+      "1": "Bewiesene Erfolgsgeschichte",
+      "2": "24/7 technischer Support",
+      "3": "Komplette Geschäftslösungen",
+      "4": "Schnelle Projektlieferung"
+    },
     "form": {
       "name": "Name",
       "email": "E-Mail",
       "message": "Nachricht",
-      "send": "Nachricht senden"
+      "send": "Nachricht Senden",
+      "sending": "Senden...",
+      "namePlaceholder": "Ihr vollständiger Name",
+      "emailPlaceholder": "beispiel@digicyfr.com",
+      "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt und wie wir Ihr Unternehmen stärken können...",
+      "success": "Nachricht erfolgreich gesendet! Wir werden Sie bald kontaktieren.",
+      "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder senden Sie uns direkt eine E-Mail an"
     }
   },
   "blog": {

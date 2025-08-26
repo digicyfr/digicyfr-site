@@ -5,13 +5,31 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "partners": "Partenaires"
   },
   "home": {
     "hero": {
       "title": "Bienvenue chez Digicyfr",
       "subtitle": "Votre partenaire de confiance pour les solutions numériques et le développement web",
-      "cta": "Commencer"
+      "cta": "Commencer",
+      "slides": {
+        "0": {
+          "title": "Boostez Vos Ventes En Ligne",
+          "subtitle": "SEO Professionnel & Marketing Digital",
+          "description": "Nous aidons les entreprises à augmenter leurs ventes grâce à l'optimisation en ligne stratégique et à la présence numérique."
+        },
+        "1": {
+          "title": "Solutions d'Entreprise Complètes",
+          "subtitle": "ERP, POS & Gestion des Stocks",
+          "description": "Mise en place de systèmes en ligne complets pour les ventes, les stocks et la gestion d'entreprise."
+        },
+        "2": {
+          "title": "Développement Web Professionnel",
+          "subtitle": "Sites Web Personnalisés & Boutiques En Ligne",
+          "description": "Créez des sites web puissants et des boutiques e-commerce qui convertissent les visiteurs en clients."
+        }
+      }
     },
     "services": {
       "title": "Nos Services",
@@ -36,8 +54,48 @@
   },
   "services": {
     "title": "Nos Services",
-    "description": "Découvrez nos services de marketing numérique et de développement web.",
-    "content": "Nous offrons des solutions numériques complètes pour aider votre entreprise à croître en ligne."
+    "description": "Nous aidons les entreprises à augmenter leurs ventes grâce à des solutions numériques complètes à de meilleurs prix",
+    "content": "Nous offrons des solutions numériques complètes pour aider votre entreprise à croître en ligne.",
+    "seo": {
+      "title": "Optimisation SEO",
+      "description": "Améliorez votre classement dans les moteurs de recherche et votre visibilité en ligne avec des stratégies SEO professionnelles.",
+      "features": {
+        "0": "Recherche de Mots-clés",
+        "1": "SEO On-page",
+        "2": "SEO Technique",
+        "3": "SEO Local"
+      }
+    },
+    "googleBusiness": {
+      "title": "Gestion Google Business",
+      "description": "Configuration et gestion complètes du profil Google Business pour la visibilité locale.",
+      "features": {
+        "0": "Configuration du Profil",
+        "1": "Gestion des Avis",
+        "2": "Annuaires Locaux",
+        "3": "Optimisation des Cartes"
+      }
+    },
+    "webDev": {
+      "title": "Développement Web",
+      "description": "Sites web professionnels et boutiques en ligne qui transforment les visiteurs en clients.",
+      "features": {
+        "0": "Design Responsive",
+        "1": "E-commerce",
+        "2": "Intégration CMS",
+        "3": "Optimisation Mobile"
+      }
+    },
+    "erp": {
+      "title": "ERP et Outils Business",
+      "description": "Systèmes complets de gestion d'entreprise pour les ventes, l'inventaire et les opérations.",
+      "features": {
+        "0": "Gestion des Ventes",
+        "1": "Contrôle d'Inventaire",
+        "2": "Systèmes POS",
+        "3": "Analytics"
+      }
+    }
   },
   "portfolio": {
     "title": "Notre Portfolio",
@@ -45,14 +103,39 @@
     "content": "Explorez notre portfolio de projets numériques réussis et de clients satisfaits."
   },
   "contact": {
-    "title": "Nous Contacter",
-    "description": "Contactez l'équipe Digicyfr.",
+    "title": "Contactez-Nous",
+    "description": "Prêt à développer votre entreprise ? Contactez-nous pour une consultation gratuite",
     "content": "Prêt à commencer votre parcours numérique ? Contactez-nous dès aujourd'hui !",
+    "info": {
+      "title": "Informations de Contact",
+      "email": "Email",
+      "phone": "Téléphone",
+      "location": "Localisation",
+      "locationValue": "Varsovie, Pologne"
+    },
+    "coverage": {
+      "title": "Couverture de Service",
+      "text": "🇵🇱 Pologne & 🇪🇺 Pays de l'UE"
+    },
+    "whyChooseTitle": "Pourquoi Nous Choisir ?",
+    "whyChoose": {
+      "0": "Meilleurs prix que la concurrence",
+      "1": "Historique prouvé de succès",
+      "2": "Support technique 24/7",
+      "3": "Solutions commerciales complètes",
+      "4": "Livraison rapide de projet"
+    },
     "form": {
       "name": "Nom",
       "email": "Email",
       "message": "Message",
-      "send": "Envoyer le Message"
+      "send": "Envoyer le Message",
+      "sending": "Envoi en cours...",
+      "namePlaceholder": "Votre nom complet",
+      "emailPlaceholder": "exemple@digicyfr.com",
+      "messagePlaceholder": "Parlez-nous de votre projet et comment nous pouvons aider à développer votre entreprise...",
+      "success": "Message envoyé avec succès ! Nous vous contacterons bientôt.",
+      "error": "Échec de l'envoi du message. Veuillez réessayer ou nous envoyer un email directement à"
     }
   },
   "blog": {

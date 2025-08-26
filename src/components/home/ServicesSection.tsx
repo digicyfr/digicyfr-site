@@ -1,50 +1,83 @@
 'use client';
-import { Search, Globe, Smartphone, ShoppingCart, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import '@/styles/components/services-section.css';
 
-const services = [
-  {
-    icon: <Search className="service-icon" />,
-    title: "SEO Optimization",
-    description: "Improve your search rankings and online visibility with professional SEO strategies.",
-    features: ["Keyword Research", "On-page SEO", "Technical SEO", "Local SEO"]
-  },
-  {
-    icon: <Globe className="service-icon" />,
-    title: "Google Business Management",
-    description: "Complete Google Business profile setup and management for local visibility.",
-    features: ["Profile Setup", "Review Management", "Local Listings", "Map Optimization"]
-  },
-  {
-    icon: <Smartphone className="service-icon" />,
-    title: "Website Development",
-    description: "Professional websites and online stores that convert visitors to customers.",
-    features: ["Responsive Design", "E-commerce", "CMS Integration", "Mobile Optimization"]
-  },
-  {
-    icon: <ShoppingCart className="service-icon" />,
-    title: "ERP & Business Tools",
-    description: "Complete business management systems for sales, inventory, and operations.",
-    features: ["Sales Management", "Inventory Control", "POS Systems", "Analytics"]
-  }
-];
-
 export default function ServicesSection() {
+  const t = useTranslations('services');
+
+  const services = [
+    {
+      title: t('seo.title'),
+      description: t('seo.description'),
+      image: "/images/design/seo-dark-concept.jpg",
+      features: [
+        t('seo.features.0'),
+        t('seo.features.1'),
+        t('seo.features.2'),
+        t('seo.features.3')
+      ]
+    },
+    {
+      title: t('googleBusiness.title'),
+      description: t('googleBusiness.description'),
+      image: "/images/design/google.jpg",
+      features: [
+        t('googleBusiness.features.0'),
+        t('googleBusiness.features.1'),
+        t('googleBusiness.features.2'),
+        t('googleBusiness.features.3')
+      ]
+    },
+    {
+      title: t('webDev.title'),
+      description: t('webDev.description'),
+      image: "/images/design/webbsite.jpg",
+      features: [
+        t('webDev.features.0'),
+        t('webDev.features.1'),
+        t('webDev.features.2'),
+        t('webDev.features.3')
+      ]
+    },
+    {
+      title: t('erp.title'),
+      description: t('erp.description'),
+      image: "/images/design/erp-pos-system.jpg",
+      features: [
+        t('erp.features.0'),
+        t('erp.features.1'),
+        t('erp.features.2'),
+        t('erp.features.3')
+      ]
+    }
+  ];
   return (
     <section id="services" className="services-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Our Services</h2>
+          <h2 className="section-title">{t('title')}</h2>
           <p className="section-description">
-            We help companies increase sales through comprehensive digital solutions at better prices
+            {t('description')}
           </p>
         </div>
 
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
-              <div className="service-icon-wrapper">
-                {service.icon}
+            <div key={index} className={`service-card ${index === 3 ? 'erp-card' : ''}`}>
+              <div className="service-image-wrapper">
+                <Image 
+                  src={service.image}
+                  alt={service.title}
+                  width={300}
+                  height={200}
+                  className="service-image"
+                  style={{
+                    objectFit: 'cover',
+                    borderRadius: '0.75rem'
+                  }}
+                />
               </div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>

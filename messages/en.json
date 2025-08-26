@@ -5,13 +5,31 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "partners": "Partners"
   },
   "home": {
     "hero": {
       "title": "Welcome to Digicyfr",
       "subtitle": "Your trusted partner for digital solutions and web development",
-      "cta": "Get Started"
+      "cta": "Get Started",
+      "slides": {
+        "0": {
+          "title": "Boost Your Online Sales",
+          "subtitle": "Professional SEO & Digital Marketing",
+          "description": "We help companies increase sales through strategic online optimization and digital presence."
+        },
+        "1": {
+          "title": "Complete Business Solutions",
+          "subtitle": "ERP, POS & Inventory Management",
+          "description": "Setup complete online systems for sales, inventory, and business management."
+        },
+        "2": {
+          "title": "Professional Web Development",
+          "subtitle": "Custom Websites & Online Stores",
+          "description": "Create powerful websites and e-commerce stores that convert visitors to customers."
+        }
+      }
     },
     "services": {
       "title": "Our Services",
@@ -36,23 +54,123 @@
   },
   "services": {
     "title": "Our Services",
-    "description": "Discover our digital marketing and web development services.",
-    "content": "We offer comprehensive digital solutions to help your business grow online."
+    "description": "We help companies increase sales through comprehensive digital solutions at better prices",
+    "content": "We offer comprehensive digital solutions to help your business grow online.",
+    "seo": {
+      "title": "SEO Optimization",
+      "description": "Improve your search rankings and online visibility with professional SEO strategies.",
+      "features": {
+        "0": "Keyword Research",
+        "1": "On-page SEO",
+        "2": "Technical SEO",
+        "3": "Local SEO"
+      }
+    },
+    "googleBusiness": {
+      "title": "Google Business Management",
+      "description": "Complete Google Business profile setup and management for local visibility.",
+      "features": {
+        "0": "Profile Setup",
+        "1": "Review Management",
+        "2": "Local Listings",
+        "3": "Map Optimization"
+      }
+    },
+    "webDev": {
+      "title": "Website Development",
+      "description": "Professional websites and online stores that convert visitors to customers.",
+      "features": {
+        "0": "Responsive Design",
+        "1": "E-commerce",
+        "2": "CMS Integration",
+        "3": "Mobile Optimization"
+      }
+    },
+    "erp": {
+      "title": "ERP & Business Tools",
+      "description": "Complete business management systems for sales, inventory, and operations.",
+      "features": {
+        "0": "Sales Management",
+        "1": "Inventory Control",
+        "2": "POS Systems",
+        "3": "Analytics"
+      }
+    }
   },
   "portfolio": {
     "title": "Our Portfolio",
     "description": "Check out our latest projects and client success stories.",
     "content": "Explore our portfolio of successful digital projects and satisfied clients."
   },
+  "management": {
+    "title": "Manage Your Business with Ease",
+    "subtitle": "Complete digital solutions to streamline your operations and boost productivity",
+    "features": {
+      "dashboard": {
+        "title": "Real-time Dashboard",
+        "description": "Monitor your business metrics and KPIs in one centralized location"
+      },
+      "analytics": {
+        "title": "Advanced Analytics",
+        "description": "Get deep insights into your business performance with detailed reports"
+      },
+      "customers": {
+        "title": "Customer Management",
+        "description": "Track customer interactions and build lasting relationships"
+      },
+      "automation": {
+        "title": "Process Automation",
+        "description": "Automate repetitive tasks and focus on growing your business"
+      }
+    },
+    "benefitsTitle": "Why Choose Our Management Solutions?",
+    "benefits": [
+      "24/7 real-time monitoring and alerts",
+      "Integrated payment processing systems",
+      "Multi-location business support",
+      "Mobile app for on-the-go management",
+      "Automated inventory tracking",
+      "Comprehensive reporting tools"
+    ],
+    "cta": {
+      "primary": "Start Free Trial",
+      "secondary": "Schedule Demo"
+    }
+  },
   "contact": {
-    "title": "Contact Us",
-    "description": "Get in touch with the Digicyfr team.",
+    "title": "Get In Touch",
+    "description": "Ready to boost your business? Contact us for a free consultation",
     "content": "Ready to start your digital journey? Contact us today!",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "locationValue": "Warsaw, Poland"
+    },
+    "coverage": {
+      "title": "Service Coverage",
+      "text": "🇵🇱 Poland & 🇪🇺 EU Countries"
+    },
+    "whyChooseTitle": "Why Choose Us?",
+    "whyChoose": {
+      "0": "Better pricing than competitors",
+      "1": "Proven track record of success",
+      "2": "24/7 technical support",
+      "3": "Complete business solutions",
+      "4": "Fast project delivery"
+    },
     "form": {
       "name": "Name",
       "email": "Email",
       "message": "Message",
-      "send": "Send Message"
+      "send": "Send Message",
+      "sending": "Sending...",
+      "namePlaceholder": "Your full name",
+      "emailPlaceholder": "example@digicyfr.com",
+      "messagePlaceholder": "Tell us about your project and how we can help boost your business...",
+      "success": "Message sent successfully! We'll contact you soon.",
+      "error": "Failed to send message. Please try again or email us directly at"
     }
   },
   "blog": {
@@ -61,11 +179,12 @@
     "content": "Stay updated with the latest trends in digital marketing and web development."
   },
   "footer": {
-    "description": "Your trusted partner for digital solutions and web development.",
+    "company": "Digicyfr",
+    "description": "Professional digital solutions that help businesses increase sales and grow online.",
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Info",
     "email": "Email: info@digicyfr.com",
-    "phone": "Phone: +1 (555) 123-4567",
+    "phone": "Phone: +486950163",
     "copyright": "© 2024 Digicyfr. All rights reserved."
   }
 }

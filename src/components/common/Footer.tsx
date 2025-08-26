@@ -1,15 +1,17 @@
 'use client';
+import { useTranslations } from 'next-intl';
 import '@/styles/components/footer.css';
 
 export default function Footer() {
+  const t = useTranslations('footer');
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
           <div className="footer-section">
-            <h3 className="footer-title">Digicyfr</h3>
+            <h3 className="footer-title">{t('company')}</h3>
             <p className="footer-description">
-              Professional digital solutions that help businesses increase sales and grow online.
+              {t('description')}
             </p>
           </div>
           
@@ -46,7 +48,7 @@ export default function Footer() {
         
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © 2024 Digicyfr. All rights reserved.
+            {t('copyright')}
           </p>
         </div>
       </div>

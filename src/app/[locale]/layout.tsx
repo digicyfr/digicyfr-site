@@ -1,5 +1,5 @@
-// Fixed src/app/[locale]/layout.tsx
-
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 const locales = ['en', 'pl', 'de', 'fr'];
@@ -17,6 +17,8 @@ export default async function LocaleLayout({
     notFound();
   }
 
+  const messages = await getMessages({ locale });
+
   return (
     <html lang={locale}>
       <head>
@@ -25,7 +27,9 @@ export default async function LocaleLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

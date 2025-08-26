@@ -1,0 +1,25 @@
+cyfr@0.1.0 /workspaces/cyfr
+├── @emailjs/browser@4.4.1
+├── @emnapi/core@1.4.3 extraneous
+├── @emnapi/runtime@1.4.3 extraneous
+├── @emnapi/wasi-threads@1.0.2 extraneous
+├── @eslint/eslintrc@3.3.1
+├── @img/sharp-libvips-linux-x64@1.1.0 extraneous
+├── @img/sharp-libvips-linuxmusl-x64@1.1.0 extraneous
+├── @napi-rs/wasm-runtime@0.2.11 extraneous
+├── @tailwindcss/postcss@4.1.8
+├── @tybys/wasm-util@0.9.0 extraneous
+├── @types/node@20.19.0
+├── @types/react-dom@19.1.6
+├── @types/react@19.1.6
+├── eslint-config-next@15.3.3
+├── eslint@9.28.0
+├── framer-motion@12.16.0
+├── lucide-react@0.513.0
+├── next-intl@4.1.0
+├── next@15.3.3
+├── react-dom@19.1.0
+├── react@19.1.0
+├── tailwindcss@4.1.8
+└── typescript@5.8.3
+

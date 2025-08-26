@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "name": "Cyfr Website Project",
+  "description": "Full access configuration for Cyfr website development and analysis",
+  "tools": {
+    "allowed": "*",
+    "restrictions": {}
+  },
+  "memory": {
+    "enabled": true
+  },
+  "context": {
+    "enabled": true,
+    "directories": [
+      "src",
+      "public", 
+      "messages",
+      "."
+    ]
+  },
+  "mcpServers": {
+    "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    }
+  },
+  "security": {
+    "confirmations": {
+      "file_operations": false,
+      "bash_commands": false,
+      "network_requests": false,
+      "sensitive_operations": false
+    },
+    "restrictions": {
+      "file_system": {
+        "read": "*",
+        "write": "*",
+        "execute": "*"
+      },
+      "network": {
+        "allowed_domains": "*"
+      }
+    }
+  },
+  "preferences": {
+    "auto_save": true,
+    "verbose_output": false,
+    "max_file_size": "10mb",
+    "interactive_mode": true
+  }
+}

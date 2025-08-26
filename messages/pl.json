@@ -5,13 +5,31 @@
     "services": "Usługi",
     "portfolio": "Portfolio",
     "blog": "Blog",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "partners": "Partnerzy"
   },
   "home": {
     "hero": {
       "title": "Witamy w Digicyfr",
       "subtitle": "Twój zaufany partner w zakresie rozwiązań cyfrowych i tworzenia stron internetowych",
-      "cta": "Rozpocznij"
+      "cta": "Rozpocznij",
+      "slides": {
+        "0": {
+          "title": "Zwiększ Swoje Sprzedaże Online",
+          "subtitle": "Profesjonalne SEO i Marketing Cyfrowy",
+          "description": "Pomagamy firmom zwiększać sprzedaż poprzez strategiczną optymalizację online i obecność cyfrową."
+        },
+        "1": {
+          "title": "Kompleksowe Rozwiązania Biznesowe",
+          "subtitle": "ERP, POS i Zarządzanie Magazynem",
+          "description": "Konfiguracja kompletnych systemów online do sprzedaży, magazynowania i zarządzania biznesem."
+        },
+        "2": {
+          "title": "Profesjonalne Tworzenie Stron",
+          "subtitle": "Niestandardowe Strony i Sklepy Online",
+          "description": "Twórz potężne strony internetowe i sklepy e-commerce, które przekształcają odwiedzających w klientów."
+        }
+      }
     },
     "services": {
       "title": "Nasze Usługi",
@@ -36,23 +54,123 @@
   },
   "services": {
     "title": "Nasze Usługi",
-    "description": "Odkryj nasze usługi marketingu cyfrowego i tworzenia stron internetowych.",
-    "content": "Oferujemy kompleksowe rozwiązania cyfrowe, które pomogą Twojemu biznesowi rozwijać się online."
+    "description": "Pomagamy firmom zwiększać sprzedaż dzięki kompleksowym rozwiązaniom cyfrowym w lepszych cenach",
+    "content": "Oferujemy kompleksowe rozwiązania cyfrowe, które pomogą Twojemu biznesowi rozwijać się online.",
+    "seo": {
+      "title": "Optymalizacja SEO",
+      "description": "Popraw swoją pozycję w wyszukiwarkach i widoczność online dzięki profesjonalnym strategiom SEO.",
+      "features": {
+        "0": "Badanie Słów Kluczowych",
+        "1": "SEO On-page",
+        "2": "SEO Techniczne",
+        "3": "SEO Lokalne"
+      }
+    },
+    "googleBusiness": {
+      "title": "Zarządzanie Google Business",
+      "description": "Kompletna konfiguracja i zarządzanie profilem Google Business dla lokalnej widoczności.",
+      "features": {
+        "0": "Konfiguracja Profilu",
+        "1": "Zarządzanie Opiniami",
+        "2": "Lokalne Katalogi",
+        "3": "Optymalizacja Map"
+      }
+    },
+    "webDev": {
+      "title": "Tworzenie Stron Internetowych",
+      "description": "Profesjonalne strony internetowe i sklepy online, które przekształcają odwiedzających w klientów.",
+      "features": {
+        "0": "Responsywny Design",
+        "1": "E-commerce",
+        "2": "Integracja CMS",
+        "3": "Optymalizacja Mobile"
+      }
+    },
+    "erp": {
+      "title": "ERP i Narzędzia Biznesowe",
+      "description": "Kompletne systemy zarządzania biznesem dla sprzedaży, magazynu i operacji.",
+      "features": {
+        "0": "Zarządzanie Sprzedażą",
+        "1": "Kontrola Magazynu",
+        "2": "Systemy POS",
+        "3": "Analityka"
+      }
+    }
   },
   "portfolio": {
     "title": "Nasze Portfolio",
     "description": "Zobacz nasze najnowsze projekty i historie sukcesu klientów.",
     "content": "Poznaj nasze portfolio udanych projektów cyfrowych i zadowolonych klientów."
   },
+  "management": {
+    "title": "Zarządzaj swoim biznesem z łatwością",
+    "subtitle": "Kompletne rozwiązania cyfrowe do usprawnienia działań i zwiększenia produktywności",
+    "features": {
+      "dashboard": {
+        "title": "Panel w czasie rzeczywistym",
+        "description": "Monitoruj metryki biznesowe i KPI w jednym scentralizowanym miejscu"
+      },
+      "analytics": {
+        "title": "Zaawansowana analityka",
+        "description": "Uzyskaj głęboki wgląd w wyniki firmy dzięki szczegółowym raportom"
+      },
+      "customers": {
+        "title": "Zarządzanie klientami",
+        "description": "Śledź interakcje z klientami i buduj trwałe relacje"
+      },
+      "automation": {
+        "title": "Automatyzacja procesów",
+        "description": "Zautomatyzuj powtarzalne zadania i skup się na rozwoju biznesu"
+      }
+    },
+    "benefitsTitle": "Dlaczego warto wybrać nasze rozwiązania?",
+    "benefits": [
+      "Monitorowanie i alerty 24/7 w czasie rzeczywistym",
+      "Zintegrowane systemy przetwarzania płatności",
+      "Wsparcie dla firm wielolokalizacyjnych",
+      "Aplikacja mobilna do zarządzania w ruchu",
+      "Automatyczne śledzenie zapasów",
+      "Kompleksowe narzędzia raportowania"
+    ],
+    "cta": {
+      "primary": "Rozpocznij darmowy okres próbny",
+      "secondary": "Umów się na demo"
+    }
+  },
   "contact": {
-    "title": "Skontaktuj się z nami",
-    "description": "Skontaktuj się z zespołem Digicyfr.",
+    "title": "Skontaktuj Się z Nami",
+    "description": "Gotowy na rozwiń śwojego biznesu? Skontaktuj się z nami po bezpłatną konsultację",
     "content": "Gotowy, aby rozpocząć swoją cyfrową podróż? Skontaktuj się z nami już dziś!",
+    "info": {
+      "title": "Informacje Kontaktowe",
+      "email": "Email",
+      "phone": "Telefon",
+      "location": "Lokalizacja",
+      "locationValue": "Warszawa, Polska"
+    },
+    "coverage": {
+      "title": "Zasięg Usług",
+      "text": "🇵🇱 Polska & 🇪🇺 Kraje UE"
+    },
+    "whyChooseTitle": "Dlaczego My?",
+    "whyChoose": {
+      "0": "Lepsze ceny niż konkurencja",
+      "1": "Udowodniona historia sukcesów",
+      "2": "Wsparcie techniczne 24/7",
+      "3": "Kompleksowe rozwiązania biznesowe",
+      "4": "Szybka realizacja projektów"
+    },
     "form": {
       "name": "Imię",
       "email": "Email",
       "message": "Wiadomość",
-      "send": "Wyślij wiadomość"
+      "send": "Wyślij Wiadomość",
+      "sending": "Wysyłanie...",
+      "namePlaceholder": "Twoje pełne imię",
+      "emailPlaceholder": "przyklad@digicyfr.com",
+      "messagePlaceholder": "Opowiedz nam o swoim projekcie i jak możemy pomóc rozwinąć Twój biznes...",
+      "success": "Wiadomość wysłana pomyślnie! Skontaktujemy się z Tobą wkrótce.",
+      "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz do nas bezpośrednio na"
     }
   },
   "blog": {

@@ -1,34 +1,36 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import '@/styles/components/hero-carousel.css';
-
-const slides = [
-  {
-    title: "Boost Your Online Sales",
-    subtitle: "Professional SEO & Digital Marketing",
-    description: "We help companies increase sales through strategic online optimization and digital presence.",
-    image: "🚀",
-    gradient: "gradient-blue-purple"
-  },
-  {
-    title: "Complete Business Solutions",
-    subtitle: "ERP, POS & Inventory Management",
-    description: "Setup complete online systems for sales, inventory, and business management.",
-    image: "💼",
-    gradient: "gradient-green-blue"
-  },
-  {
-    title: "Professional Web Development",
-    subtitle: "Custom Websites & Online Stores",
-    description: "Create powerful websites and e-commerce stores that convert visitors to customers.",
-    image: "🌐",
-    gradient: "gradient-purple-pink"
-  }
-];
 
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const t = useTranslations('home.hero');
+
+  const slides = [
+    {
+      title: t('slides.0.title'),
+      subtitle: t('slides.0.subtitle'),
+      description: t('slides.0.description'),
+      image: "/images/design/Digicyfr Banner.png",
+      gradient: "gradient-blue-purple"
+    },
+    {
+      title: t('slides.1.title'),
+      subtitle: t('slides.1.subtitle'),
+      description: t('slides.1.description'),
+      image: "/images/design/erp-pos-system.jpg",
+      gradient: "gradient-green-blue"
+    },
+    {
+      title: t('slides.2.title'),
+      subtitle: t('slides.2.subtitle'),
+      description: t('slides.2.description'),
+      image: "/images/design/webbsite.jpg",
+      gradient: "gradient-purple-pink"
+    }
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -47,14 +49,19 @@ export default function HeroCarousel() {
         <div
           key={index}
           className={`hero-slide ${slide.gradient} ${currentSlide === index ? 'active' : ''}`}
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slide.image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
         >
           <div className="hero-content">
-            <div className="hero-image">{slide.image}</div>
             <h1 className="hero-title">{slide.title}</h1>
             <h2 className="hero-subtitle">{slide.subtitle}</h2>
             <p className="hero-description">{slide.description}</p>
             <button onClick={handleContactClick} className="hero-cta">
-              Get Started <ArrowRight size={20} />
+              {t('cta')} <ArrowRight size={20} />
             </button>
           </div>
         </div>

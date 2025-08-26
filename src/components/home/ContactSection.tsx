@@ -1,10 +1,12 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Star, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import emailjs from '@emailjs/browser';
 import '@/styles/components/contact-section.css';
 
 export default function ContactSection() {
+  const t = useTranslations('contact');
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState('');
@@ -65,13 +67,6 @@ export default function ContactSection() {
     }
   };
 
-  const whyChooseUs = [
-    'Better pricing than competitors',
-    'Proven track record of success',
-    '24/7 technical support',
-    'Complete business solutions',
-    'Fast project delivery'
-  ];
 
   // Prevent hydration issues by not rendering until mounted
   if (!mounted) {
@@ -82,15 +77,15 @@ export default function ContactSection() {
     <section id="contact" className="contact-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Get In Touch</h2>
+          <h2 className="section-title">{t('title')}</h2>
           <p className="section-description">
-            Ready to boost your business? Contact us for a free consultation
+            {t('description')}
           </p>
         </div>
 
         <div className="contact-grid">
           <div className="contact-info">
-            <h3 className="contact-info-title">Contact Information</h3>
+            <h3 className="contact-info-title">{t('info.title')}</h3>
             
             <div className="contact-items">
               <div className="contact-item">
@@ -98,7 +93,7 @@ export default function ContactSection() {
                   <Mail size={24} />
                 </div>
                 <div className="contact-details">
-                  <div className="contact-label">Email</div>
+                  <div className="contact-label">{t('info.email')}</div>
                   <div className="contact-value">
                     {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
                   </div>
@@ -110,7 +105,7 @@ export default function ContactSection() {
                   <Phone size={24} />
                 </div>
                 <div className="contact-details">
-                  <div className="contact-label">Phone</div>
+                  <div className="contact-label">{t('info.phone')}</div>
                   <div className="contact-value">
                     {process.env.NEXT_PUBLIC_COMPANY_PHONE}
                   </div>
@@ -122,30 +117,19 @@ export default function ContactSection() {
                   <MapPin size={24} />
                 </div>
                 <div className="contact-details">
-                  <div className="contact-label">Location</div>
-                  <div className="contact-value">Warsaw, Poland</div>
+                  <div className="contact-label">{t('info.location')}</div>
+                  <div className="contact-value">{t('info.locationValue')}</div>
                 </div>
               </div>
             </div>
 
             <div className="service-area">
-              <h4 className="service-area-title">Service Coverage</h4>
+              <h4 className="service-area-title">{t('coverage.title')}</h4>
               <p className="service-area-text">
-                🇵🇱 Poland & 🇪🇺 EU Countries
+                {t('coverage.text')}
               </p>
             </div>
 
-            <div className="why-choose-us">
-              <h4 className="why-choose-title">Why Choose Digicyfr ?</h4>
-              <div className="why-choose-list">
-                {whyChooseUs.map((item, index) => (
-                  <div key={index} className="why-choose-item">
-                    <Star size={16} className="why-choose-star" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           <div className="contact-form-wrapper">
@@ -153,17 +137,17 @@ export default function ContactSection() {
               {/* Status Messages */}
               {status === 'success' && (
                 <div className="form-status success">
-                  ✅ Message sent successfully! We&apos;ll contact you soon.
+                  ✅ {t('form.success')}
                 </div>
               )}
               {status === 'error' && (
                 <div className="form-status error">
-                  ❌ Failed to send message. Please try again or email us directly at {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
+                  ❌ {t('form.error')} {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
                 </div>
               )}
 
               <div className="form-group">
-                <label className="form-label">Name *</label>
+                <label className="form-label">{t('form.name')} *</label>
                 <input
                   type="text"
                   required
@@ -171,12 +155,12 @@ export default function ContactSection() {
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="form-input"
                   disabled={isLoading}
-                  placeholder="Your full name"
+                  placeholder={t('form.namePlaceholder')}
                 />
               </div>
 
               <div className="form-group">
-                <label className="form-label">Email *</label>
+                <label className="form-label">{t('form.email')} *</label>
                 <input
                   type="email"
                   required
@@ -184,12 +168,12 @@ export default function ContactSection() {
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="form-input"
                   disabled={isLoading}
-                  placeholder="example@digicyfr.com"
+                  placeholder={t('form.emailPlaceholder')}
                 />
               </div>
 
               <div className="form-group">
-                <label className="form-label">Message *</label>
+                <label className="form-label">{t('form.message')} *</label>
                 <textarea
                   required
                   rows={5}
@@ -197,7 +181,7 @@ export default function ContactSection() {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="form-textarea"
                   disabled={isLoading}
-                  placeholder="Tell us about your project and how we can help boost your business..."
+                  placeholder={t('form.messagePlaceholder')}
                 />
               </div>
 
@@ -205,11 +189,11 @@ export default function ContactSection() {
                 {isLoading ? (
                   <>
                     <div className="loading-spinner"></div>
-                    Sending...
+                    {t('form.sending')}
                   </>
                 ) : (
                   <>
-                    Send Message <ArrowRight size={20} />
+                    {t('form.send')} <ArrowRight size={20} />
                   </>
                 )}
               </button>

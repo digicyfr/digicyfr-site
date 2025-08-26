@@ -38,6 +38,20 @@ const clients = [
     website: "https://kebabsuperking.com/art-kebab"
   },
   { 
+    name: "Kebab Abdullah", 
+    logo: "/partners/kebab-abdullah.png", 
+    emoji: "🥙",
+    industry: "Fast Food",
+    website: "#"
+  },
+  { 
+    name: "Kebab Ayman", 
+    logo: "/partners/kebabayman.png", 
+    emoji: "🥙",
+    industry: "Restaurant",
+    website: "#"
+  },
+  { 
     name: "OceanPro", 
     logo: "https://www.theoceanpro.com/images/logo.png", 
     emoji: "🌊",
@@ -47,7 +61,7 @@ const clients = [
 ];
 
 const stats = [
-  { number: "5+", label: "Happy Clients" },
+  { number: "8+", label: "Happy Clients" },
   { number: "50+", label: "Location" },
   { number: "100%", label: "Success Rate" },
   { number: "24/7", label: "Support" }

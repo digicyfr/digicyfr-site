@@ -27,7 +27,7 @@ export default function ContactSectionPl() {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: process.env.NEXT_PUBLIC_COMPANY_EMAIL,
+        to_email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'contact@digicyfr.com',
         time: new Date().toLocaleString('pl-PL', {
           timeZone: 'Europe/Warsaw',
           year: 'numeric',
@@ -93,7 +93,7 @@ export default function ContactSectionPl() {
                 <div className="contact-details">
                   <div className="contact-label">Email</div>
                   <div className="contact-value">
-                    {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
+                    {process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'contact@digicyfr.com'}
                   </div>
                 </div>
               </div>
@@ -105,7 +105,7 @@ export default function ContactSectionPl() {
                 <div className="contact-details">
                   <div className="contact-label">Telefon</div>
                   <div className="contact-value">
-                    {process.env.NEXT_PUBLIC_COMPANY_PHONE}
+                    {process.env.NEXT_PUBLIC_COMPANY_PHONE || '+48 695 016 33'}
                   </div>
                 </div>
               </div>
@@ -151,7 +151,7 @@ export default function ContactSectionPl() {
               )}
               {status === 'error' && (
                 <div className="form-status error">
-                  ❌ Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz bezpośrednio na {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
+                  ❌ Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz bezpośrednio na {process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'contact@digicyfr.com'}
                 </div>
               )}
 

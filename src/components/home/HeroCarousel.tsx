@@ -14,21 +14,21 @@ export default function HeroCarousel() {
       subtitle: t('slides.0.subtitle'),
       description: t('slides.0.description'),
       image: "/images/design/Digicyfr Banner.png",
-      gradient: "gradient-blue-purple"
+      overlay: "rgba(0, 0, 0, 0.4)"
     },
     {
       title: t('slides.1.title'),
       subtitle: t('slides.1.subtitle'),
       description: t('slides.1.description'),
       image: "/images/design/erp-pos-system.jpg",
-      gradient: "gradient-green-blue"
+      overlay: "rgba(0, 0, 0, 0.45)"
     },
     {
       title: t('slides.2.title'),
       subtitle: t('slides.2.subtitle'),
       description: t('slides.2.description'),
       image: "/images/design/webbsite.jpg",
-      gradient: "gradient-purple-pink"
+      overlay: "rgba(0, 0, 0, 0.45)"
     }
   ];
 
@@ -48,9 +48,9 @@ export default function HeroCarousel() {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`hero-slide ${slide.gradient} ${currentSlide === index ? 'active' : ''}`}
+          className={`hero-slide ${currentSlide === index ? 'active' : ''}`}
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slide.image})`,
+            backgroundImage: `linear-gradient(${slide.overlay}, ${slide.overlay}), url("${slide.image}")`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'

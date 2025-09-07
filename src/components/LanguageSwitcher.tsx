@@ -2,7 +2,6 @@
 import { usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { useState, useEffect } from 'react';
-import { ChevronDown } from 'lucide-react';
 
 const locales = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -52,36 +51,61 @@ export default function LanguageSwitcher() {
     <div className="relative inline-block" data-language-switcher>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg transition-all duration-200 border border-gray-300 bg-white shadow-sm"
+        className="flex items-center justify-center w-14 h-14 rounded-full bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-blue-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110"
       >
-        <span className="text-lg">{currentLocale?.flag}</span>
-        <span className="hidden sm:inline text-sm font-medium">{currentLocale?.name}</span>
-        <span className="sm:hidden text-sm font-semibold">{currentLocale?.code.toUpperCase()}</span>
-        <ChevronDown 
-          size={14} 
-          className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
-        />
+        <span className="text-3xl">{currentLocale?.flag}</span>
       </button>
       
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-44 bg-white rounded-lg shadow-xl border border-gray-200 z-50 py-1">
-          {locales.map((loc) => (
-            <button
-              key={loc.code}
-              onClick={() => switchLanguage(loc.code)}
-              className={`flex items-center gap-3 px-4 py-2 w-full text-left hover:bg-gray-50 transition-colors duration-150 ${
-                loc.code === locale ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
-              }`}
-            >
-              <span className="text-lg">{loc.flag}</span>
-              <span className="text-sm font-medium">{loc.name}</span>
-              {loc.code === locale && (
-                <span className="ml-auto text-blue-500 text-sm font-bold">✓</span>
-              )}
-            </button>
-          ))}
+        <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 z-50 p-2 animate-slideDown">
+          <div className="flex flex-col gap-1">
+            {locales.map((loc) => (
+              <button
+                key={loc.code}
+                onClick={() => switchLanguage(loc.code)}
+                className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-110 ${
+                  loc.code === locale 
+                    ? 'bg-blue-100 dark:bg-blue-900/50 ring-2 ring-blue-400' 
+                    : 'hover:bg-gray-100 dark:hover:bg-gray-700'
+                }`}
+                title={loc.name}
+              >
+                <span className="text-3xl">{loc.flag}</span>
+              </button>
+            ))}
+          </div>
         </div>
       )}
+      
+      <style jsx>{`
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-20px) scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+        
+        @keyframes pulse {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+        }
+        
+        .animate-slideDown {
+          animation: slideDown 0.3s ease-out;
+        }
+        
+        .animate-pulse {
+          animation: pulse 2s infinite;
+        }
+      `}</style>
     </div>
   );
 }

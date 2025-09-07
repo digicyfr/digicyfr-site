@@ -315,6 +315,30 @@
   color: #2563eb;
 }
 
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .management-section {
+    padding: 4rem 0;
+  }
+
+  .management-section .section-title {
+    font-size: 2.2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  .benefits-section {
+    padding: 2.5rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .management-section {
@@ -322,33 +346,117 @@
   }
 
   .management-section .section-title {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   .management-section .section-subtitle {
     font-size: 1rem;
+    padding: 0 1rem;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .feature-image-wrapper {
+    height: 150px;
+  }
+
+  .feature-title {
+    font-size: 1.2rem;
+  }
+
+  .feature-description {
+    font-size: 0.9rem;
   }
 
   .benefits-section {
     padding: 2rem 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .benefits-title {
+    font-size: 1.5rem;
   }
 
   .benefits-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .benefit-item {
+    padding: 0.6rem;
+  }
+
+  .benefit-text {
+    font-size: 0.95rem;
   }
 
   .cta-section {
     flex-direction: column;
     align-items: stretch;
+    padding: 0 1rem;
   }
 
   .cta-button {
     width: 100%;
     justify-content: center;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .management-section {
+    padding: 2.5rem 0;
+  }
+
+  .management-section::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .management-section .section-title {
+    font-size: 1.6rem;
+  }
+
+  .management-section .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .feature-card {
+    padding: 1.25rem;
+  }
+
+  .feature-image-wrapper {
+    height: 130px;
+  }
+
+  .feature-title {
+    font-size: 1.1rem;
+  }
+
+  .benefits-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .benefits-title {
+    font-size: 1.3rem;
+  }
+
+  .benefit-text {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
   }
 }

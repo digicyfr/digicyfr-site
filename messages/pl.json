@@ -95,6 +95,22 @@
         "2": "Systemy POS",
         "3": "Analityka"
       }
+    },
+    "systemIntegration": {
+      "title": "Integracja Systemów",
+      "description": "Bezproblemowa integracja POS i platform dostaw. Połącz się z Glovo, Pyszne, UberEats, Bolt Food i Wolt przez nasze moduły Odoo.",
+      "features": {
+        "0": "Integracja Systemu POS",
+        "1": "Połączenie z Platformami Dostaw",
+        "2": "Rozwój Modułów Odoo",
+        "3": "Niestandardowe Rozwiązania API"
+      },
+      "details": {
+        "pos": "Bezproblemowe połączenie systemów POS z operacjami biznesowymi dla synchronizacji danych w czasie rzeczywistym.",
+        "delivery": "Bezpośrednia integracja z głównymi platformami dostaw, w tym Glovo, Pyszne, UberEats, Bolt Food i Wolt dla automatycznego zarządzania zamówieniami.",
+        "odoo": "Niestandardowe moduły Odoo zaprojektowane specjalnie dla Twoich potrzeb biznesowych, zapewniające idealną integrację z istniejącymi procesami.",
+        "api": "Dostosowane rozwiązania API do łączenia różnych systemów i automatyzacji przepływu danych między aplikacjami biznesowymi."
+      }
     }
   },
   "portfolio": {
@@ -179,6 +195,7 @@
     "content": "Bądź na bieżąco z najnowszymi trendami w marketingu cyfrowym i tworzeniu stron internetowych."
   },
   "footer": {
+    "company": "Digicyfr",
     "description": "Twój zaufany partner w zakresie rozwiązań cyfrowych i tworzenia stron internetowych.",
     "quickLinks": "Szybkie Linki",
     "contactInfo": "Informacje Kontaktowe",

@@ -87,10 +87,26 @@ export default function ManagementSection() {
           </div>
 
           <div className="cta-section">
-            <button className="cta-button primary">
+            <button 
+              className="cta-button primary"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               {t('cta.primary')}
             </button>
-            <button className="cta-button secondary">
+            <button 
+              className="cta-button secondary"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               {t('cta.secondary')}
             </button>
           </div>

@@ -1,5 +1,5 @@
 'use client';
-import { Search, Globe, Smartphone, ShoppingCart, CheckCircle } from 'lucide-react';
+import { Search, Globe, Smartphone, ShoppingCart, CheckCircle, Link } from 'lucide-react';
 import '@/styles/components/services-section.css';
 
 const services = [
@@ -26,6 +26,12 @@ const services = [
     title: "ERP & Outils d'entreprise",
     description: "Systèmes complets de gestion d'entreprise pour les ventes, l'inventaire et les opérations.",
     features: ["Gestion des ventes", "Contrôle des stocks", "Systèmes POS", "Analytique"]
+  },
+  {
+    icon: <Link className="service-icon" />,
+    title: "Intégration Système",
+    description: "Intégration transparente POS et plateformes de livraison. Connectez-vous avec Glovo, Pyszne, UberEats, Bolt Food et Wolt via nos modules Odoo.",
+    features: ["Intégration Système POS", "Connectivité Plateformes de Livraison", "Développement Modules Odoo", "Solutions API Personnalisées"]
   }
 ];
 

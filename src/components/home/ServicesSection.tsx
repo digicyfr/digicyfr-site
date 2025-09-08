@@ -51,6 +51,17 @@ export default function ServicesSection() {
         t('erp.features.2'),
         t('erp.features.3')
       ]
+    },
+    {
+      title: t('systemIntegration.title'),
+      description: t('systemIntegration.description'),
+      image: "/images/design/system-integration.svg",
+      features: [
+        t('systemIntegration.features.0'),
+        t('systemIntegration.features.1'),
+        t('systemIntegration.features.2'),
+        t('systemIntegration.features.3')
+      ]
     }
   ];
   return (

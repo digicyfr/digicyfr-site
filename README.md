@@ -162,7 +162,7 @@ Required environment variables:
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
 NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
-NEXT_PUBLIC_COMPANY_EMAIL=contact@digicyfr.com
+NEXT_PUBLIC_COMPANY_EMAIL=info@digicyfr.com
 NEXT_PUBLIC_COMPANY_PHONE=+48 123 456 789
 ```
 

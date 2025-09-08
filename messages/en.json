@@ -95,6 +95,22 @@
         "2": "POS Systems",
         "3": "Analytics"
       }
+    },
+    "systemIntegration": {
+      "title": "System Integration",
+      "description": "Seamless POS and delivery platform integration. Connect with Glovo, Pyszne, UberEats, Bolt Food, and Wolt through our custom Odoo modules.",
+      "features": {
+        "0": "POS System Integration",
+        "1": "Delivery Platform Connectivity",
+        "2": "Odoo Module Development",
+        "3": "Custom API Solutions"
+      },
+      "details": {
+        "pos": "Seamlessly connect your point-of-sale systems with your business operations for real-time data synchronization.",
+        "delivery": "Direct integration with major delivery platforms including Glovo, Pyszne, UberEats, Bolt Food, and Wolt for automated order management.",
+        "odoo": "Custom Odoo modules designed specifically for your business needs, ensuring perfect integration with existing workflows.",
+        "api": "Tailored API solutions to connect different systems and automate data flow between your business applications."
+      }
     }
   },
   "portfolio": {

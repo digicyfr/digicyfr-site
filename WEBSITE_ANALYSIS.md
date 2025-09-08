@@ -49,7 +49,7 @@ NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_emailjs_service_id
 NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
 
 # Company Information
-NEXT_PUBLIC_COMPANY_EMAIL=contact@digicyfr.com
+NEXT_PUBLIC_COMPANY_EMAIL=info@digicyfr.com
 NEXT_PUBLIC_COMPANY_PHONE=+48_xxx_xxx_xxx
 ```
 

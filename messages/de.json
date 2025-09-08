@@ -95,6 +95,22 @@
         "2": "POS-Systeme",
         "3": "Analytics"
       }
+    },
+    "systemIntegration": {
+      "title": "Systemintegration",
+      "description": "Nahtlose POS- und Lieferplattform-Integration. Verbinden Sie sich mit Glovo, Pyszne, UberEats, Bolt Food und Wolt über unsere Odoo-Module.",
+      "features": {
+        "0": "POS-System Integration",
+        "1": "Lieferplattform-Konnektivität",
+        "2": "Odoo-Modul Entwicklung",
+        "3": "Benutzerdefinierte API-Lösungen"
+      },
+      "details": {
+        "pos": "Verbinden Sie Ihre POS-Systeme nahtlos mit Ihren Geschäftsabläufen für Echtzeit-Datensynchronisation.",
+        "delivery": "Direkte Integration mit großen Lieferplattformen wie Glovo, Pyszne, UberEats, Bolt Food und Wolt für automatisiertes Bestellmanagement.",
+        "odoo": "Maßgeschneiderte Odoo-Module speziell für Ihre Geschäftsanforderungen, die perfekte Integration mit bestehenden Arbeitsabläufen gewährleisten.",
+        "api": "Maßgeschneiderte API-Lösungen zur Verbindung verschiedener Systeme und Automatisierung des Datenflusses zwischen Ihren Geschäftsanwendungen."
+      }
     }
   },
   "portfolio": {
@@ -179,6 +195,7 @@
     "content": "Bleiben Sie auf dem Laufenden über die neuesten Trends im digitalen Marketing und in der Webentwicklung."
   },
   "footer": {
+    "company": "Digicyfr",
     "description": "Ihr vertrauensvoller Partner für digitale Lösungen und Webentwicklung.",
     "quickLinks": "Schnelllinks",
     "contactInfo": "Kontaktinformationen",

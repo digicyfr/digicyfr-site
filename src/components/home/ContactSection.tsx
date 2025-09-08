@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import emailjs from '@emailjs/browser';
 import '@/styles/components/contact-section.css';
@@ -32,7 +31,7 @@ export default function ContactSection() {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'contact@digicyfr.com',
+        to_email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'info@digicyfr.com',
         time: new Date().toLocaleString('en-US', {
           timeZone: 'Europe/Warsaw',
           year: 'numeric',
@@ -89,21 +88,15 @@ export default function ContactSection() {
             
             <div className="contact-items">
               <div className="contact-item">
-                <div className="contact-icon">
-                  <Mail size={24} />
-                </div>
                 <div className="contact-details">
                   <div className="contact-label">{t('info.email')}</div>
                   <div className="contact-value">
-                    {process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'contact@digicyfr.com'}
+                    {process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'info@digicyfr.com'}
                   </div>
                 </div>
               </div>
 
               <div className="contact-item">
-                <div className="contact-icon">
-                  <Phone size={24} />
-                </div>
                 <div className="contact-details">
                   <div className="contact-label">{t('info.phone')}</div>
                   <div className="contact-value">
@@ -113,9 +106,6 @@ export default function ContactSection() {
               </div>
 
               <div className="contact-item">
-                <div className="contact-icon">
-                  <MapPin size={24} />
-                </div>
                 <div className="contact-details">
                   <div className="contact-label">{t('info.location')}</div>
                   <div className="contact-value">{t('info.locationValue')}</div>
@@ -137,12 +127,12 @@ export default function ContactSection() {
               {/* Status Messages */}
               {status === 'success' && (
                 <div className="form-status success">
-                  ✅ {t('form.success')}
+                  {t('form.success')}
                 </div>
               )}
               {status === 'error' && (
                 <div className="form-status error">
-                  ❌ {t('form.error')} {process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'contact@digicyfr.com'}
+                  {t('form.error')} {process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'info@digicyfr.com'}
                 </div>
               )}
 
@@ -193,7 +183,7 @@ export default function ContactSection() {
                   </>
                 ) : (
                   <>
-                    {t('form.send')} <ArrowRight size={20} />
+                    {t('form.send')}
                   </>
                 )}
               </button>

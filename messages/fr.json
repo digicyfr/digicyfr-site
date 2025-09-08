@@ -95,12 +95,63 @@
         "2": "Systèmes POS",
         "3": "Analytics"
       }
+    },
+    "systemIntegration": {
+      "title": "Intégration Système",
+      "description": "Intégration transparente POS et plateformes de livraison. Connectez-vous avec Glovo, Pyszne, UberEats, Bolt Food et Wolt via nos modules Odoo.",
+      "features": {
+        "0": "Intégration Système POS",
+        "1": "Connectivité Plateformes de Livraison",
+        "2": "Développement Modules Odoo",
+        "3": "Solutions API Personnalisées"
+      },
+      "details": {
+        "pos": "Connectez parfaitement vos systèmes de point de vente avec vos opérations commerciales pour une synchronisation des données en temps réel.",
+        "delivery": "Intégration directe avec les principales plateformes de livraison, notamment Glovo, Pyszne, UberEats, Bolt Food et Wolt pour une gestion automatisée des commandes.",
+        "odoo": "Modules Odoo personnalisés conçus spécifiquement pour vos besoins d'affaires, assurant une intégration parfaite avec les flux de travail existants.",
+        "api": "Solutions API sur mesure pour connecter différents systèmes et automatiser le flux de données entre vos applications d'entreprise."
+      }
     }
   },
   "portfolio": {
     "title": "Notre Portfolio",
     "description": "Découvrez nos derniers projets et nos success stories clients.",
     "content": "Explorez notre portfolio de projets numériques réussis et de clients satisfaits."
+  },
+  "management": {
+    "title": "Gérez votre entreprise en toute simplicité",
+    "subtitle": "Solutions numériques complètes pour rationaliser vos opérations et augmenter la productivité",
+    "features": {
+      "dashboard": {
+        "title": "Tableau de bord en temps réel",
+        "description": "Surveillez vos métriques d'entreprise et KPI dans un emplacement centralisé"
+      },
+      "analytics": {
+        "title": "Analyse avancée",
+        "description": "Obtenez des informations approfondies sur les performances de votre entreprise avec des rapports détaillés"
+      },
+      "customers": {
+        "title": "Gestion des clients",
+        "description": "Suivez les interactions avec les clients et construisez des relations durables"
+      },
+      "automation": {
+        "title": "Automatisation des processus",
+        "description": "Automatisez les tâches répétitives et concentrez-vous sur le développement de votre entreprise"
+      }
+    },
+    "benefitsTitle": "Pourquoi choisir nos solutions de gestion ?",
+    "benefits": [
+      "Surveillance et alertes 24/7 en temps réel",
+      "Systèmes de traitement des paiements intégrés",
+      "Support d'entreprise multi-emplacements",
+      "Application mobile pour la gestion en déplacement",
+      "Suivi automatique des stocks",
+      "Outils de reporting complets"
+    ],
+    "cta": {
+      "primary": "Commencer l'essai gratuit",
+      "secondary": "Programmer une démo"
+    }
   },
   "contact": {
     "title": "Contactez-Nous",
@@ -144,6 +195,7 @@
     "content": "Restez à jour avec les dernières tendances en marketing numérique et développement web."
   },
   "footer": {
+    "company": "Digicyfr",
     "description": "Votre partenaire de confiance pour les solutions numériques et le développement web.",
     "quickLinks": "Liens Rapides",
     "contactInfo": "Informations de Contact",

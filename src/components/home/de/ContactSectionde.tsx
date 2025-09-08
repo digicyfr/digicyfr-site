@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Star, ArrowRight } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import '@/styles/components/contact-section.css';
 
@@ -27,7 +26,7 @@ export default function ContactSectionDe() {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'contact@digicyfr.com',
+        to_email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'info@digicyfr.com',
         time: new Date().toLocaleString('de-DE', {
           timeZone: 'Europe/Berlin',
           year: 'numeric',
@@ -87,21 +86,15 @@ export default function ContactSectionDe() {
             
             <div className="contact-items">
               <div className="contact-item">
-                <div className="contact-icon">
-                  <Mail size={24} />
-                </div>
                 <div className="contact-details">
                   <div className="contact-label">E-Mail</div>
                   <div className="contact-value">
-                    {process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'contact@digicyfr.com'}
+                    {process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'info@digicyfr.com'}
                   </div>
                 </div>
               </div>
 
               <div className="contact-item">
-                <div className="contact-icon">
-                  <Phone size={24} />
-                </div>
                 <div className="contact-details">
                   <div className="contact-label">Telefon</div>
                   <div className="contact-value">
@@ -111,9 +104,6 @@ export default function ContactSectionDe() {
               </div>
 
               <div className="contact-item">
-                <div className="contact-icon">
-                  <MapPin size={24} />
-                </div>
                 <div className="contact-details">
                   <div className="contact-label">Standort</div>
                   <div className="contact-value">Warschau, Polen</div>
@@ -124,7 +114,7 @@ export default function ContactSectionDe() {
             <div className="service-area">
               <h4 className="service-area-title">Servicegebiet</h4>
               <p className="service-area-text">
-                🇵🇱 Polen & 🇪🇺 EU-Länder
+Polen & EU-Länder
               </p>
             </div>
 
@@ -133,7 +123,6 @@ export default function ContactSectionDe() {
               <div className="why-choose-list">
                 {whyChooseUs.map((item, index) => (
                   <div key={index} className="why-choose-item">
-                    <Star size={16} className="why-choose-star" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -146,12 +135,12 @@ export default function ContactSectionDe() {
               {/* Status Messages */}
               {status === 'success' && (
                 <div className="form-status success">
-                  ✅ Nachricht erfolgreich gesendet! Wir melden uns bald bei Ihnen.
+                  Nachricht erfolgreich gesendet! Wir melden uns bald bei Ihnen.
                 </div>
               )}
               {status === 'error' && (
                 <div className="form-status error">
-                  ❌ Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an {process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'contact@digicyfr.com'}
+                  Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an {process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'info@digicyfr.com'}
                 </div>
               )}
 
@@ -202,7 +191,7 @@ export default function ContactSectionDe() {
                   </>
                 ) : (
                   <>
-                    Nachricht senden <ArrowRight size={20} />
+                    Nachricht senden
                   </>
                 )}
               </button>

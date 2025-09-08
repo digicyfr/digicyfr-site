@@ -20,7 +20,7 @@ Add these to your hosting platform's environment variables section:
 
 ```env
 # Company Contact Information
-NEXT_PUBLIC_COMPANY_EMAIL=contact@digicyfr.com
+NEXT_PUBLIC_COMPANY_EMAIL=info@digicyfr.com
 NEXT_PUBLIC_COMPANY_PHONE=+48 695 016 33
 NEXT_PUBLIC_COMPANY_ADDRESS=Warsaw, Poland
 NEXT_PUBLIC_COMPANY_WEBSITE=https://digicyfr.com
@@ -108,7 +108,7 @@ After deployment:
 
 ## 📞 Support
 
-For deployment issues, contact: contact@digicyfr.com
+For deployment issues, contact: info@digicyfr.com
 
 ---
 

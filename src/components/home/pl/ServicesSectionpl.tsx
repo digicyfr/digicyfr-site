@@ -1,5 +1,5 @@
 'use client';
-import { Search, Globe, Smartphone, ShoppingCart, CheckCircle } from 'lucide-react';
+import { Search, Globe, Smartphone, ShoppingCart, CheckCircle, Link } from 'lucide-react';
 import '@/styles/components/services-section.css';
 
 const services = [
@@ -26,6 +26,12 @@ const services = [
     title: "ERP i narzędzia biznesowe",
     description: "Kompleksowe systemy zarządzania firmą dla sprzedaży, magazynu i operacji.",
     features: ["Zarządzanie sprzedażą", "Kontrola magazynu", "Systemy POS", "Analityka"]
+  },
+  {
+    icon: <Link className="service-icon" />,
+    title: "Integracja Systemów",
+    description: "Bezproblemowa integracja POS i platform dostaw. Połącz się z Glovo, Pyszne, UberEats, Bolt Food i Wolt przez nasze moduły Odoo.",
+    features: ["Integracja Systemu POS", "Połączenie z Platformami Dostaw", "Rozwój Modułów Odoo", "Niestandardowe Rozwiązania API"]
   }
 ];
 

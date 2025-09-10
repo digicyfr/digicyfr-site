@@ -1,7 +1,7 @@
 'use client';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useLocale } from 'next-intl';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useTransition } from 'react';
 
 const locales = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -12,8 +12,10 @@ const locales = [
 
 export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const locale = useLocale();
   const pathname = usePathname();
+  const router = useRouter();
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -36,13 +38,29 @@ export default function LanguageSwitcher() {
       return;
     }
 
-    // Replace the locale in the current path
-    const segments = pathname.split('/');
-    segments[1] = newLocale;
-    const newPath = segments.join('/');
+    setIsOpen(false);
     
-    // Force navigation
-    window.location.href = newPath;
+    startTransition(() => {
+      // Handle different pathname scenarios
+      let newPath: string;
+      
+      // Check if pathname starts with a locale
+      const pathSegments = pathname.split('/').filter(Boolean);
+      const firstSegment = pathSegments[0];
+      const currentLocales = ['en', 'pl', 'de', 'fr'];
+      
+      if (currentLocales.includes(firstSegment)) {
+        // Replace existing locale
+        pathSegments[0] = newLocale;
+        newPath = '/' + pathSegments.join('/');
+      } else {
+        // Add locale prefix to current path
+        newPath = `/${newLocale}${pathname === '/' ? '' : pathname}`;
+      }
+      
+      // Use Next.js router for smooth navigation
+      router.push(newPath);
+    });
   };
 
   const currentLocale = locales.find(l => l.code === locale);
@@ -51,10 +69,18 @@ export default function LanguageSwitcher() {
     <div className="relative inline-block" data-language-switcher>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 rounded-lg transition-all duration-200 border border-gray-200 bg-white/90 backdrop-blur-sm hover:bg-white hover:border-gray-300 hover:shadow-md"
+        className={`p-2 rounded-lg transition-all duration-200 border border-gray-200 bg-white/90 backdrop-blur-sm hover:bg-white hover:border-gray-300 hover:shadow-md relative ${
+          isPending ? 'opacity-75 cursor-wait' : ''
+        }`}
         title="Select Language"
+        disabled={isPending}
       >
         <span className="text-xl">{currentLocale?.flag}</span>
+        {isPending && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        )}
       </button>
       
       {isOpen && (
@@ -68,8 +94,9 @@ export default function LanguageSwitcher() {
                   loc.code === locale 
                     ? 'bg-blue-50 hover:bg-blue-100' 
                     : ''
-                }`}
+                } ${isPending ? 'cursor-wait opacity-75' : ''}`}
                 title={loc.name}
+                disabled={isPending}
               >
                 <span className="text-xl block">{loc.flag}</span>
               </button>

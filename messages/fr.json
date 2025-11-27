@@ -10,9 +10,14 @@
   },
   "home": {
     "hero": {
+      "headline": "Vos Systèmes d'Entreprise et Marketing en un seul endroit",
+      "subtext": "Nous aidons les entreprises à créer des sites web, automatiser les opérations et se développer en ligne.",
       "title": "Bienvenue chez Digicyfr",
       "subtitle": "Votre partenaire de confiance pour les solutions numériques et le développement web",
-      "cta": "Commencer",
+      "cta": {
+        "primary": "En savoir plus",
+        "secondary": "Commencer"
+      },
       "slides": {
         "0": {
           "title": "Boostez Vos Ventes En Ligne",
@@ -31,6 +36,11 @@
         }
       }
     },
+    "empowering": {
+      "title": "Autonomiser les Entreprises avec la Technologie",
+      "description": "Nous rationalisons les processus commerciaux avec des intégrations ERP et POS modernes afin que les équipes puissent travailler plus rapidement et plus intelligemment. Entre-temps, nos services de marketing et web garantissent que ces améliorations mènent à une croissance mesurable.",
+      "cta": "En Savoir Plus"
+    },
     "services": {
       "title": "Nos Services",
       "webDev": {
@@ -45,6 +55,34 @@
         "title": "Optimisation SEO",
         "description": "Améliorez votre classement dans les moteurs de recherche et votre visibilité en ligne."
       }
+    },
+    "partners": {
+      "title": "Nos Partenaires"
+    },
+    "stats": {
+      "title": "Nous Avons Réalisé",
+      "subtitle": "Plus de 100+ Projets Réussis",
+      "happyClients": "Clients Satisfaits",
+      "locations": "Emplacements",
+      "successRate": "Taux de Réussite",
+      "support": "Support"
+    },
+    "testimonials": {
+      "title": "Ce Que Disent Nos Clients",
+      "items": {
+        "0": {
+          "quote": "Le système ERP qu'ils ont mis en place a rationalisé l'ensemble de notre fonctionnement. Nous avons économisé d'innombrables heures sur la gestion des stocks et avons constaté des améliorations immédiates de l'efficacité.",
+          "name": "SARAH JOHNSON"
+        },
+        "1": {
+          "quote": "Leur équipe de développement web nous a créé un superbe site e-commerce qui a doublé notre taux de conversion. L'attention aux détails et le service client étaient exceptionnels.",
+          "name": "MICHAEL CHEN"
+        },
+        "2": {
+          "quote": "Travailler avec Digicyfr sur notre profil Google Business a été un véritable tournant. Notre visibilité locale s'est considérablement améliorée et les demandes ont augmenté de manière significative.",
+          "name": "ANNA KOWALSKI"
+        }
+      }
     }
   },
   "about": {
@@ -56,6 +94,7 @@
     "title": "Nos Services",
     "description": "Nous aidons les entreprises à augmenter leurs ventes grâce à des solutions numériques complètes à de meilleurs prix",
     "content": "Nous offrons des solutions numériques complètes pour aider votre entreprise à croître en ligne.",
+    "more": "Plus",
     "seo": {
       "title": "Optimisation SEO",
       "description": "Améliorez votre classement dans les moteurs de recherche et votre visibilité en ligne avec des stratégies SEO professionnelles.",

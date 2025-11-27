@@ -1,0 +1,201 @@
+/* Stats Section */
+.stats-section {
+  position: relative;
+  padding: 50px 0;
+  overflow: hidden;
+  /* Dark purple/blue gradient base */
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+/* Polygonal/Geometric Background Overlay */
+.stats-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    /* Polygonal pattern using multiple gradients */
+    linear-gradient(125deg, transparent 40%, rgba(106, 17, 203, 0.15) 40%, rgba(106, 17, 203, 0.15) 45%, transparent 45%),
+    linear-gradient(245deg, transparent 35%, rgba(37, 99, 235, 0.12) 35%, rgba(37, 99, 235, 0.12) 42%, transparent 42%),
+    linear-gradient(65deg, transparent 55%, rgba(139, 92, 246, 0.1) 55%, rgba(139, 92, 246, 0.1) 62%, transparent 62%),
+    linear-gradient(185deg, transparent 25%, rgba(59, 130, 246, 0.08) 25%, rgba(59, 130, 246, 0.08) 35%, transparent 35%),
+    linear-gradient(305deg, transparent 60%, rgba(147, 51, 234, 0.12) 60%, rgba(147, 51, 234, 0.12) 70%, transparent 70%),
+    /* Soft glow spots */
+    radial-gradient(ellipse at 20% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(106, 17, 203, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Additional geometric shapes using pseudo-elements */
+.stats-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    /* Triangle shapes */
+    linear-gradient(120deg, transparent 0%, transparent 50%, rgba(88, 28, 135, 0.08) 50%, rgba(88, 28, 135, 0.08) 51%, transparent 51%),
+    linear-gradient(240deg, transparent 0%, transparent 45%, rgba(30, 64, 175, 0.06) 45%, rgba(30, 64, 175, 0.06) 47%, transparent 47%),
+    linear-gradient(60deg, transparent 0%, transparent 65%, rgba(124, 58, 237, 0.07) 65%, rgba(124, 58, 237, 0.07) 68%, transparent 68%);
+  pointer-events: none;
+}
+
+.stats-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Subtle noise texture for depth */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.stats-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Header */
+.stats-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.stats-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.stats-subtitle {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Individual Stat Item */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.stat-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 40px 0;
+  }
+
+  .stats-container {
+    padding: 0 20px;
+  }
+
+  .stats-header {
+    margin-bottom: 30px;
+  }
+
+  .stats-title {
+    font-size: 24px;
+  }
+
+  .stats-subtitle {
+    font-size: 14px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+  }
+
+  .stat-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+  }
+
+  .stat-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .stat-value {
+    font-size: 28px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .stats-section {
+    padding: 35px 0;
+  }
+
+  .stats-grid {
+    gap: 25px 15px;
+  }
+
+  .stat-value {
+    font-size: 24px;
+  }
+}

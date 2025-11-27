@@ -1,6 +1,6 @@
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
-import ServicesSection from '@/components/home/ServicesSection';
+import ServicesSection from '@/components/home/new/ServicesSection';
 
 interface Props {
   params: Promise<{ locale: string }>;

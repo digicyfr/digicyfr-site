@@ -10,9 +10,14 @@
   },
   "home": {
     "hero": {
+      "headline": "Your Business Systems and Marketing in one place",
+      "subtext": "We help companies build websites, automate operations and grow online.",
       "title": "Welcome to Digicyfr",
       "subtitle": "Your trusted partner for digital solutions and web development",
-      "cta": "Get Started",
+      "cta": {
+        "primary": "Learn More",
+        "secondary": "Get Started"
+      },
       "slides": {
         "0": {
           "title": "Boost Your Online Sales",
@@ -31,6 +36,11 @@
         }
       }
     },
+    "empowering": {
+      "title": "Empowering Businesses with Technology",
+      "description": "We streamline business processes with modern ERP and POS integrations so teams can work faster and smarter. Meanwhile our marketing and web services ensure those improvements lead to measurable growth.",
+      "cta": "Read More"
+    },
     "services": {
       "title": "Our Services",
       "webDev": {
@@ -45,6 +55,34 @@
         "title": "SEO Optimization",
         "description": "Improve your search rankings and online visibility."
       }
+    },
+    "partners": {
+      "title": "Our Partners"
+    },
+    "stats": {
+      "title": "We've Completed",
+      "subtitle": "More than 100+ Work Successfully",
+      "happyClients": "Happy Clients",
+      "locations": "Locations",
+      "successRate": "Success Rate",
+      "support": "Support"
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "items": {
+        "0": {
+          "quote": "The ERP system they implemented streamlined our entire operation. We saved countless hours on inventory management and saw immediate improvements in efficiency.",
+          "name": "SARAH JOHNSON"
+        },
+        "1": {
+          "quote": "Their web development team built us a stunning e-commerce site that doubled our conversion rate. The attention to detail and customer service was exceptional.",
+          "name": "MICHAEL CHEN"
+        },
+        "2": {
+          "quote": "Working with Digicyfr on our Google Business profile was a game changer. Our local visibility improved dramatically and inquiries increased significantly.",
+          "name": "ANNA KOWALSKI"
+        }
+      }
     }
   },
   "about": {
@@ -56,6 +94,7 @@
     "title": "Our Services",
     "description": "We help companies increase sales through comprehensive digital solutions at better prices",
     "content": "We offer comprehensive digital solutions to help your business grow online.",
+    "more": "More",
     "seo": {
       "title": "SEO Optimization",
       "description": "Improve your search rankings and online visibility with professional SEO strategies.",

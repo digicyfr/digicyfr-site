@@ -10,9 +10,14 @@
   },
   "home": {
     "hero": {
+      "headline": "Ihre Geschäftssysteme und Marketing an einem Ort",
+      "subtext": "Wir helfen Unternehmen beim Aufbau von Websites, der Automatisierung von Abläufen und dem Online-Wachstum.",
       "title": "Willkommen bei Digicyfr",
       "subtitle": "Ihr vertrauensvoller Partner für digitale Lösungen und Webentwicklung",
-      "cta": "Loslegen",
+      "cta": {
+        "primary": "Mehr erfahren",
+        "secondary": "Loslegen"
+      },
       "slides": {
         "0": {
           "title": "Steigern Sie Ihre Online-Verkäufe",
@@ -31,6 +36,11 @@
         }
       }
     },
+    "empowering": {
+      "title": "Unternehmen mit Technologie stärken",
+      "description": "Wir optimieren Geschäftsprozesse mit modernen ERP- und POS-Integrationen, damit Teams schneller und intelligenter arbeiten können. Gleichzeitig sorgen unsere Marketing- und Webdienste dafür, dass diese Verbesserungen zu messbarem Wachstum führen.",
+      "cta": "Mehr Erfahren"
+    },
     "services": {
       "title": "Unsere Dienstleistungen",
       "webDev": {
@@ -45,6 +55,34 @@
         "title": "SEO-Optimierung",
         "description": "Verbessern Sie Ihre Suchmaschinenplatzierung und Online-Sichtbarkeit."
       }
+    },
+    "partners": {
+      "title": "Unsere Partner"
+    },
+    "stats": {
+      "title": "Wir Haben Abgeschlossen",
+      "subtitle": "Mehr als 100+ Erfolgreiche Projekte",
+      "happyClients": "Zufriedene Kunden",
+      "locations": "Standorte",
+      "successRate": "Erfolgsquote",
+      "support": "Support"
+    },
+    "testimonials": {
+      "title": "Was Unsere Kunden Sagen",
+      "items": {
+        "0": {
+          "quote": "Das ERP-System, das sie implementiert haben, hat unseren gesamten Betrieb optimiert. Wir haben unzählige Stunden bei der Bestandsverwaltung gespart und sofortige Verbesserungen der Effizienz festgestellt.",
+          "name": "SARAH JOHNSON"
+        },
+        "1": {
+          "quote": "Ihr Webentwicklungsteam hat uns eine beeindruckende E-Commerce-Website erstellt, die unsere Konversionsrate verdoppelt hat. Die Liebe zum Detail und der Kundenservice waren außergewöhnlich.",
+          "name": "MICHAEL CHEN"
+        },
+        "2": {
+          "quote": "Die Zusammenarbeit mit Digicyfr an unserem Google Business-Profil war ein Gamechanger. Unsere lokale Sichtbarkeit hat sich dramatisch verbessert und die Anfragen sind deutlich gestiegen.",
+          "name": "ANNA KOWALSKI"
+        }
+      }
     }
   },
   "about": {
@@ -56,6 +94,7 @@
     "title": "Unsere Dienstleistungen",
     "description": "Wir helfen Unternehmen dabei, den Umsatz durch umfassende digitale Lösungen zu besseren Preisen zu steigern",
     "content": "Wir bieten umfassende digitale Lösungen, um Ihr Unternehmen online wachsen zu lassen.",
+    "more": "Mehr",
     "seo": {
       "title": "SEO-Optimierung",
       "description": "Verbessern Sie Ihre Suchmaschinenplatzierung und Online-Sichtbarkeit mit professionellen SEO-Strategien.",

@@ -10,9 +10,14 @@
   },
   "home": {
     "hero": {
+      "headline": "Twoje Systemy Biznesowe i Marketing w jednym miejscu",
+      "subtext": "Pomagamy firmom budować strony internetowe, automatyzować operacje i rozwijać się online.",
       "title": "Witamy w Digicyfr",
       "subtitle": "Twój zaufany partner w zakresie rozwiązań cyfrowych i tworzenia stron internetowych",
-      "cta": "Rozpocznij",
+      "cta": {
+        "primary": "Dowiedz się więcej",
+        "secondary": "Rozpocznij"
+      },
       "slides": {
         "0": {
           "title": "Zwiększ Swoje Sprzedaże Online",
@@ -31,6 +36,11 @@
         }
       }
     },
+    "empowering": {
+      "title": "Wzmacnianie Firm za Pomocą Technologii",
+      "description": "Usprawniamy procesy biznesowe za pomocą nowoczesnych integracji ERP i POS, dzięki czemu zespoły mogą pracować szybciej i mądrzej. Tymczasem nasze usługi marketingowe i webowe zapewniają, że te ulepszenia prowadzą do mierzalnego wzrostu.",
+      "cta": "Czytaj Więcej"
+    },
     "services": {
       "title": "Nasze Usługi",
       "webDev": {
@@ -45,6 +55,34 @@
         "title": "Optymalizacja SEO",
         "description": "Popraw swoją pozycję w wyszukiwarkach i widoczność online."
       }
+    },
+    "partners": {
+      "title": "Nasi Partnerzy"
+    },
+    "stats": {
+      "title": "Zrealizowaliśmy",
+      "subtitle": "Ponad 100+ Udanych Projektów",
+      "happyClients": "Zadowolonych Klientów",
+      "locations": "Lokalizacje",
+      "successRate": "Skuteczność",
+      "support": "Wsparcie"
+    },
+    "testimonials": {
+      "title": "Co Mówią Nasi Klienci",
+      "items": {
+        "0": {
+          "quote": "System ERP, który wdrożyli, usprawnił całą naszą działalność. Zaoszczędziliśmy niezliczone godziny na zarządzaniu zapasami i od razu zauważyliśmy poprawę wydajności.",
+          "name": "SARAH JOHNSON"
+        },
+        "1": {
+          "quote": "Ich zespół webowy zbudował nam oszałamiającą stronę e-commerce, która podwoiła nasz współczynnik konwersji. Dbałość o szczegóły i obsługa klienta była wyjątkowa.",
+          "name": "MICHAEL CHEN"
+        },
+        "2": {
+          "quote": "Współpraca z Digicyfr nad naszym profilem Google Business zmieniła zasady gry. Nasza lokalna widoczność znacząco się poprawiła, a liczba zapytań znacznie wzrosła.",
+          "name": "ANNA KOWALSKI"
+        }
+      }
     }
   },
   "about": {
@@ -56,6 +94,7 @@
     "title": "Nasze Usługi",
     "description": "Pomagamy firmom zwiększać sprzedaż dzięki kompleksowym rozwiązaniom cyfrowym w lepszych cenach",
     "content": "Oferujemy kompleksowe rozwiązania cyfrowe, które pomogą Twojemu biznesowi rozwijać się online.",
+    "more": "Więcej",
     "seo": {
       "title": "Optymalizacja SEO",
       "description": "Popraw swoją pozycję w wyszukiwarkach i widoczność online dzięki profesjonalnym strategiom SEO.",

@@ -82,8 +82,7 @@
 }
 
 .partner-image {
-  width: 120px;
-  height: 120px;
+  
   object-fit: contain;
   transition: transform 0.3s ease;
 }

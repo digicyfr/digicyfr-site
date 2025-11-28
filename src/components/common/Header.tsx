@@ -21,7 +21,12 @@ export default function Header() {
 
     const handleResize = () => {
       if (typeof window !== 'undefined') {
-        setIsMobile(window.innerWidth <= 1024);
+        const mobile = window.innerWidth <= 1024;
+        setIsMobile(mobile);
+        // Close menu when switching from mobile to desktop
+        if (!mobile && isMenuOpen) {
+          setIsMenuOpen(false);
+        }
       }
     };
 
@@ -29,14 +34,26 @@ export default function Header() {
 
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', handleResize);
+      // Prevent body scroll when mobile menu is open
+      if (isMenuOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'unset';
+      }
     }
 
     return () => {
       if (typeof window !== 'undefined') {
         window.removeEventListener('resize', handleResize);
+        document.body.style.overflow = 'unset';
       }
     };
-  }, []);
+  }, [isMenuOpen]);
+
+  // Close mobile menu when clicking on a link
+  const handleMobileLinkClick = () => {
+    setIsMenuOpen(false);
+  };
 
   if (!mounted) {
     return null;
@@ -49,10 +66,10 @@ export default function Header() {
           {/* Logo - Left */}
           <Link href={`/${locale}`} className="header-logo">
             <Image
-              src="/logo/digicyfr-logo.png"
+              src="/images/logodigi.webp"
               alt="Digicyfr"
-              width={120}
-              height={40}
+              width={100} // Reduced from 120
+              height={33} // Reduced from 40 (maintaining 3:1 aspect ratio)
               priority
               className="logo-image"
             />
@@ -96,9 +113,9 @@ export default function Header() {
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                   className="mobile-menu-button"
-                  aria-label="Toggle menu"
+                  aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 >
-                  {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                  {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
                 </button>
               </>
             )}
@@ -112,35 +129,35 @@ export default function Header() {
           <div className="mobile-menu-content">
             <a
               href="#home"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleMobileLinkClick}
               className="mobile-link"
             >
               {t('home').toUpperCase()}
             </a>
             <a
               href="#services"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleMobileLinkClick}
               className="mobile-link"
             >
               {t('services').toUpperCase()}
             </a>
             <a
               href="#portfolio"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleMobileLinkClick}
               className="mobile-link"
             >
               {t('portfolio').toUpperCase()}
             </a>
             <a
               href="#about"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleMobileLinkClick}
               className="mobile-link"
             >
               {t('about').toUpperCase()}
             </a>
             <a
               href="#contact"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleMobileLinkClick}
               className="mobile-link contact-link"
             >
               {t('contact').toUpperCase()}

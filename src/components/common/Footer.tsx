@@ -40,10 +40,10 @@ export default function Footer() {
           <div className="footer-section footer-company">
             <Link href={`/${locale}`} className="footer-logo">
               <Image
-                src="/images/design/logodigi.png"
+                src="/images/logodigi.webp"
                 alt="Digicyfr"
-                width={150}
-                height={40}
+                width={120} // Reduced from 150
+                height={32} // Reduced from 40 (maintaining 3.75:1 aspect ratio)
                 className="footer-logo-img"
               />
             </Link>
@@ -120,8 +120,8 @@ export default function Footer() {
             © {currentYear} {t('company')}. All rights reserved.
           </p>
           <div className="footer-bottom-links">
-            <Link href={`/${locale}`}>Privacy Policy</Link>
-            <Link href={`/${locale}`}>Terms of Service</Link>
+            <Link href={`/${locale}/privacy`}>Privacy Policy</Link>
+            <Link href={`/${locale}/terms`}>Terms of Service</Link>
           </div>
         </div>
       </div>

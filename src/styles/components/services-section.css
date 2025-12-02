@@ -185,7 +185,9 @@
   top: 0.5rem;
 }
 
+/* Update the More Button to be a link */
 .service-more-button {
+  display: inline-block;
   background: none;
   border: none;
   font-size: 0.875rem;
@@ -196,9 +198,22 @@
   cursor: pointer;
   transition: color 0.3s ease;
   padding: 0;
+  text-decoration: none;
+  text-align: left;
+  width: fit-content;
 }
 
 .service-more-button:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Make entire card clickable area for better UX */
+.service-card-content {
+  position: relative;
+}
+
+.service-card:hover .service-more-button {
   color: var(--primary);
 }
 
@@ -259,5 +274,16 @@
   .services-grid-bottom {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+}
+
+/* Mobile adjustments for clickable areas */
+@media (max-width: 767px) {
+  .service-card {
+    min-height: 320px;
+  }
+  
+  .service-more-button {
+    margin-top: auto;
   }
 }

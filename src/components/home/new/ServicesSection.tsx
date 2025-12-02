@@ -3,24 +3,27 @@
 import React from 'react';
 import { Search, MapPin, Globe, Database, Cog } from 'lucide-react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 import '@/styles/components/services-section.css';
 
 interface ServiceConfig {
   icon: React.ReactNode;
   key: string;
+  path: string;
 }
 
 const serviceConfigs: ServiceConfig[] = [
-  { icon: <Search />, key: 'seo' },
-  { icon: <MapPin />, key: 'googleBusiness' },
-  { icon: <Globe />, key: 'webDev' },
-  { icon: <Database />, key: 'erp' },
-  { icon: <Cog />, key: 'systemIntegration' },
+  { icon: <Search />, key: 'seo', path: 'seo-optimization' },
+  { icon: <MapPin />, key: 'googleBusiness', path: 'google-business-management' },
+  { icon: <Globe />, key: 'webDev', path: 'website-development' },
+  { icon: <Database />, key: 'erp', path: 'erp-business-tools' },
+  { icon: <Cog />, key: 'systemIntegration', path: 'system-integration' },
 ];
 
 export default function ServicesSection() {
   const t = useTranslations('services');
+  const locale = useLocale();
 
   return (
     <section id="services" className="services-section">
@@ -78,9 +81,12 @@ export default function ServicesSection() {
                     </ul>
 
                     {/* More Link */}
-                    <button className="service-more-button">
+                    <Link 
+                      href={`/${locale}/services/${service.path}`}
+                      className="service-more-button"
+                    >
                       {t('more')}
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -116,9 +122,12 @@ export default function ServicesSection() {
                       </ul>
 
                       {/* More Link */}
-                      <button className="service-more-button">
+                      <Link 
+                        href={`/${locale}/services/${service.path}`}
+                        className="service-more-button"
+                      >
                         {t('more')}
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 ))}

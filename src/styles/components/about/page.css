@@ -1,0 +1,28 @@
+
+
+
+/* What We Do section specific styles */
+.about-what-we-do {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background: var(--background);
+}
+
+/* Ensure consistent section spacing */
+@media (max-width: 768px) {
+  .about-page {
+    margin-top: 70px;
+  }
+  
+  .about-what-we-do {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-what-we-do {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}

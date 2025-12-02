@@ -1,0 +1,121 @@
+/* src/styles/components/portfolio/cta.css */
+.portfolio-cta {
+  padding-top: 48px;
+  padding-bottom: 64px;
+  background: linear-gradient(135deg, var(--primary) 0%, #1d4ed8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.portfolio-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.portfolio-cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.portfolio-cta-description {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 48px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 56px;
+}
+
+.portfolio-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .portfolio-cta {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+  
+  .portfolio-cta-container {
+    padding: 0 24px;
+  }
+  
+  .portfolio-cta-title {
+    font-size: 2rem;
+  }
+  
+  .portfolio-cta-description {
+    font-size: 1.125rem;
+    margin-bottom: 24px;
+  }
+  
+  .portfolio-cta-button {
+    padding: 14px 40px;
+    font-size: 1rem;
+    min-height: 52px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-cta {
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+  
+  .portfolio-cta-container {
+    padding: 0 16px;
+  }
+  
+  .portfolio-cta-title {
+    font-size: 1.75rem;
+  }
+  
+  .portfolio-cta-description {
+    font-size: 1rem;
+  }
+  
+  .portfolio-cta-button {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 32px;
+    min-height: 48px;
+  }
+}

@@ -86,9 +86,124 @@
     }
   },
   "about": {
-    "title": "O Digicyfr",
-    "description": "Dowiedz się więcej o naszej firmie, misji i zespole.",
-    "content": "Jesteśmy wiodącą agencją cyfrową specjalizującą się w tworzeniu stron internetowych i rozwiązaniach marketingu cyfrowego."
+    "hero": {
+      "title": "O Digicyfr",
+      "subtitle": "Wzmacnianie Firm Kompleksowymi Rozwiązaniami Cyfrowymi",
+      "description": "Łączymy wiedzę techniczną z biznesowym wglądem, aby dostarczać mierzalne rezultaty, które napędzają wzrost i efektywność."
+    },
+    "whatWeDo": {
+      "title": "Co Robimy",
+      "description": "Budujemy strony internetowe zoptymalizowane pod kątem SEO, systemy marketingu cyfrowego i pełne platformy zarządzania biznesem — wszystko zaprojektowane tak, aby zwiększać Twoją sprzedaż i usprawniać operacje."
+    },
+    "metrics": {
+      "title": "Nasz Wpływ",
+      "clients": "10+ Obsłużonych Klientów",
+      "clientsDesc": "Od restauracji po handel detaliczny, pomogliśmy firmom z różnych branż",
+      "projects": "20+ Zrealizowanych Projektów",
+      "projectsDesc": "Udane wdrożenia, które przynoszą prawdziwe rezultaty biznesowe",
+      "coverage": "Obsługa w Całej Europie",
+      "coverageDesc": "Główny nacisk na Polskę z rozszerzającą się obecnością w Europie",
+      "expertise": "Wiedza Branżowa",
+      "expertiseDesc": "Głęboka wiedza w gastronomii, handlu detalicznym i systemach biznesowych"
+    },
+    "story": {
+      "title": "Nasza Historia",
+      "description": "Digicyfr to kompleksowy dostawca rozwiązań cyfrowych specjalizujący się w pomaganiu firmom zwiększać sprzedaż online poprzez innowacyjne technologie i strategiczny marketing cyfrowy. Łączymy wiedzę techniczną z biznesowym wglądem, aby dostarczać mierzalne rezultaty naszym klientom z wielu branż.",
+      "mission": {
+        "title": "Nasza Misja",
+        "text": "Wzmacniać firmy wszystkich rozmiarów do osiągania zrównoważonego wzrostu poprzez dostępne, kompleksowe rozwiązania cyfrowe, które przynoszą prawdziwe rezultaty w konkurencyjnych cenach."
+      },
+      "vision": {
+        "title": "Nasza Wizja",
+        "text": "Stać się wiodącym partnerem transformacji cyfrowej dla MŚP w całej Europie, znanym z dostarczania wyjątkowej wartości i mierzalnych wyników biznesowych."
+      }
+    },
+    "values": {
+      "title": "Nasze Podstawowe Wartości",
+      "results": {
+        "title": "Nastawienie na Rezultaty",
+        "description": "Każde rozwiązanie jest zaprojektowane tak, aby dostarczać mierzalne wyniki biznesowe"
+      },
+      "affordability": {
+        "title": "Przystępność Cenowa",
+        "description": "Profesjonalne rozwiązania w cenach, które mają sens dla rozwijających się firm"
+      },
+      "innovation": {
+        "title": "Innowacyjność",
+        "description": "Bycie na czele z najnowszymi technologiami i najlepszymi praktykami"
+      },
+      "partnership": {
+        "title": "Partnerstwo",
+        "description": "Ścisła współpraca z klientami jako długoterminowi partnerzy wzrostu"
+      },
+      "transparency": {
+        "title": "Transparentność",
+        "description": "Jasna komunikacja i uczciwe doradztwo we wszystkich naszych relacjach"
+      }
+    },
+    "advantages": {
+      "title": "Dlaczego Wybrać Digicyfr",
+      "industry": {
+        "title": "Wiedza Branżowa",
+        "description": "Głębokie doświadczenie w gastronomii, handlu detalicznym i innych sektorach"
+      },
+      "comprehensive": {
+        "title": "Kompleksowe Rozwiązania",
+        "description": "Jeden partner dla wszystkich Twoich potrzeb cyfrowych"
+      },
+      "pricing": {
+        "title": "Lepsze Ceny",
+        "description": "Profesjonalna jakość bez budżetów na poziomie przedsiębiorstwa"
+      },
+      "results": {
+        "title": "Podejście Zorientowane na Rezultaty",
+        "description": "Mierzymy sukces według wyników Twojego biznesu"
+      },
+      "partnership": {
+        "title": "Ciągłe Partnerstwo",
+        "description": "Wsparcie, które trwa po uruchomieniu"
+      },
+      "technology": {
+        "title": "Nowoczesny Stos Technologiczny",
+        "description": "Sprawdzone, najnowocześniejsze technologie"
+      },
+      "local": {
+        "title": "Znajomość Lokalnego Rynku",
+        "description": "Głęboka wiedza o rynkach europejskich, szczególnie polskim"
+      }
+    },
+    "process": {
+      "title": "Jak Pracujemy",
+      "step1": {
+        "title": "Odkrywanie i Planowanie",
+        "description": "Zaczynamy od zrozumienia Twojego biznesu, celów i wyzwań"
+      },
+      "step2": {
+        "title": "Projektowanie i Rozwój",
+        "description": "Tworzenie Twojego rozwiązania z regularnymi aktualizacjami postępu"
+      },
+      "step3": {
+        "title": "Uruchomienie i Szkolenie",
+        "description": "Zapewnienie płynnego startu i wzmocnienie Twojego zespołu"
+      },
+      "step4": {
+        "title": "Optymalizacja i Wzrost",
+        "description": "Nasza współpraca trwa z ciągłym wsparciem"
+      }
+    },
+    "technology": {
+      "title": "Technologie, Których Używamy",
+      "description": "Używamy sprawdzonych, najnowocześniejszych technologii, które zapewniają najlepszą równowagę mocy, niezawodności i opłacalności."
+    },
+    "clients": {
+      "title": "Zaufali Nam Wiodący Przedsiębiorcy",
+      "description": "Jesteśmy dumni z partnerstwa z odnoszącymi sukcesy firmami z różnych branż."
+    },
+    "cta": {
+      "title": "Gotowy Rozwinąć Swój Biznes?",
+      "description": "Porozmawiajmy o tym, jak możemy pomóc Ci osiągnąć cele transformacji cyfrowej.",
+      "button": "Rozpocznij Swój Projekt"
+    }
   },
   "services": {
     "title": "Nasze Usługi",
@@ -153,9 +268,51 @@
     }
   },
   "portfolio": {
-    "title": "Nasze Portfolio",
-    "description": "Zobacz nasze najnowsze projekty i historie sukcesu klientów.",
-    "content": "Poznaj nasze portfolio udanych projektów cyfrowych i zadowolonych klientów."
+    "hero": {
+      "title": "Nasze Portfolio",
+      "subtitle": "Historie Sukcesu Klientów",
+      "description": "Zobacz, jak pomogliśmy firmom osiągnąć transformację cyfrową i mierzalne rezultaty."
+    },
+    "filter": {
+      "title": "Filtruj Projekty",
+      "all": "Wszystkie",
+      "industry": "Filtruj według Branży",
+      "service": "Filtruj według Usługi",
+      "search": "Szukaj projektów...",
+      "industries": {
+        "all": "Wszystkie Branże",
+        "restaurant": "Restauracje i Gastronomia",
+        "retail": "Handel Detaliczny i E-commerce",
+        "service": "Firmy Usługowe",
+        "b2b": "Import/Eksport i B2B"
+      },
+      "services": {
+        "all": "Wszystkie Usługi",
+        "web": "Tworzenie Stron Internetowych",
+        "seo": "Optymalizacja SEO",
+        "google-business": "Google Business",
+        "erp": "Rozwiązania ERP",
+        "integration": "Integracja Systemów"
+      }
+    },
+    "stats": {
+      "title": "Nasz Wpływ"
+    },
+    "caseStudy": {
+      "featuredTitle": "Wyróżnione Studia Przypadków",
+      "challenge": "Wyzwanie",
+      "solution": "Nasze Rozwiązanie",
+      "results": "Rezultaty",
+      "technologies": "Użyte Technologie"
+    },
+    "industries": {
+      "title": "Branże, Które Obsługujemy"
+    },
+    "cta": {
+      "title": "Gotowy Zostać Naszą Kolejną Historią Sukcesu?",
+      "description": "Porozmawiajmy o tym, jak możemy pomóc przekształcić Twój biznes naszymi rozwiązaniami cyfrowymi.",
+      "button": "Rozpocznij Swój Projekt"
+    }
   },
   "management": {
     "title": "Zarządzaj swoim biznesem z łatwością",
@@ -193,9 +350,18 @@
     }
   },
   "contact": {
-    "title": "Skontaktuj Się z Nami",
-    "description": "Gotowy na rozwiń śwojego biznesu? Skontaktuj się z nami po bezpłatną konsultację",
+    "title": "Pracujmy Razem",
+    "description": "Gotowy przekształcić swój biznes? Skontaktuj się z nami po bezpłatną konsultację",
+    "responseTime": "Zazwyczaj odpowiadamy w ciągu 1-2 godzin",
     "content": "Gotowy, aby rozpocząć swoją cyfrową podróż? Skontaktuj się z nami już dziś!",
+    "trust": {
+      "responseTime": "1-2 Godziny",
+      "responseLabel": "Średni Czas Odpowiedzi",
+      "clients": "10+ Klientów",
+      "clientsLabel": "Obsłużonych w UE",
+      "success": "100%",
+      "successLabel": "Wskaźnik Sukcesu"
+    },
     "info": {
       "title": "Informacje Kontaktowe",
       "email": "Email",
@@ -221,17 +387,50 @@
       "message": "Wiadomość",
       "send": "Wyślij Wiadomość",
       "sending": "Wysyłanie...",
+      "helper": "Wypełnij poniższy formularz, a odpowiemy w ciągu 1-2 godzin",
       "namePlaceholder": "Twoje pełne imię",
-      "emailPlaceholder": "przyklad@digicyfr.com",
+      "emailPlaceholder": "twoj-email@example.com",
       "messagePlaceholder": "Opowiedz nam o swoim projekcie i jak możemy pomóc rozwinąć Twój biznes...",
       "success": "Wiadomość wysłana pomyślnie! Skontaktujemy się z Tobą wkrótce.",
       "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz do nas bezpośrednio na"
     }
   },
   "blog": {
-    "title": "Blog",
-    "description": "Przeczytaj nasze najnowsze spostrzeżenia i aktualizacje branżowe.",
-    "content": "Bądź na bieżąco z najnowszymi trendami w marketingu cyfrowym i tworzeniu stron internetowych."
+    "title": "Blog i zasoby",
+    "subtitle": "Trendy branżowe, poradniki i historie sukcesu",
+    "description": "Przeczytaj nasze najnowsze spostrzeżenia i aktualizacje branżowe",
+    "readMore": "Czytaj więcej",
+    "readingTime": "{minutes} min czytania",
+    "publishedOn": "Opublikowano",
+    "updatedOn": "Zaktualizowano",
+    "author": "Autor",
+    "category": "Kategoria",
+    "tags": "Tagi",
+    "relatedPosts": "Powiązane artykuły",
+    "allPosts": "Wszystkie artykuły",
+    "search": "Szukaj artykułów...",
+    "shareArticle": "Udostępnij ten artykuł",
+    "copyLink": "Kopiuj link",
+    "linkCopied": "Link skopiowany!",
+    "categories": {
+      "all": "Wszystkie kategorie",
+      "industry-insights": "Trendy branżowe",
+      "how-to-guides": "Poradniki",
+      "success-stories": "Historie sukcesu",
+      "company-news": "Aktualności firmy"
+    },
+    "filters": {
+      "filterBy": "Filtruj według",
+      "sortBy": "Sortuj według",
+      "newest": "Najnowsze",
+      "oldest": "Najstarsze",
+      "popular": "Najpopularniejsze"
+    },
+    "empty": {
+      "title": "Nie znaleziono artykułów",
+      "description": "Spróbuj dostosować filtry lub zapytanie wyszukiwania",
+      "button": "Zobacz wszystkie artykuły"
+    }
   },
   "footer": {
     "company": "Digicyfr",
@@ -241,5 +440,12 @@
     "email": "Email: info@digicyfr.com",
     "phone": "Telefon: +1 (555) 123-4567",
     "copyright": "© 2024 Digicyfr. Wszystkie prawa zastrzeżone."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Strona Nie Znaleziona",
+    "description": "Ups! Strona, której szukasz, nie istnieje. Mogła zostać przeniesiona lub usunięta.",
+    "buttonHome": "Strona Główna",
+    "buttonContact": "Kontakt"
   }
 }

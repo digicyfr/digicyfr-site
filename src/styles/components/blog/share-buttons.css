@@ -1,0 +1,180 @@
+/* src/styles/components/blog/share-buttons.css */
+
+/* ShareButtons Component Styles
+ * Following BLOG_SPACING.md design system
+ * Top margin: 32-40px, Button gap: 12-16px
+ */
+
+.share-buttons {
+  padding: 32px 0; /* SPACING: 32px vertical */
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  margin: 40px 0; /* SPACING: 32-40px margins */
+}
+
+.share-buttons-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Title */
+.share-buttons-title {
+  font-size: 18px; /* H4 size */
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16px; /* SPACING: 16px */
+  text-align: center;
+}
+
+/* Button Grid */
+.share-buttons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; /* SPACING: 12-16px button gap */
+  justify-content: center;
+}
+
+/* Individual Share Button */
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* SPACING: 8px between icon and text */
+  padding: 12px 20px; /* SPACING: 12px 20px */
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn:active {
+  transform: translateY(0);
+}
+
+/* Icon */
+.share-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Twitter Button */
+.share-btn-twitter {
+  background: #1DA1F2;
+}
+
+.share-btn-twitter:hover {
+  background: #1a8cd8;
+}
+
+/* Facebook Button */
+.share-btn-facebook {
+  background: #1877F2;
+}
+
+.share-btn-facebook:hover {
+  background: #166fe5;
+}
+
+/* LinkedIn Button */
+.share-btn-linkedin {
+  background: #0A66C2;
+}
+
+.share-btn-linkedin:hover {
+  background: #095196;
+}
+
+/* WhatsApp Button */
+.share-btn-whatsapp {
+  background: #25D366;
+}
+
+.share-btn-whatsapp:hover {
+  background: #1eb855;
+}
+
+/* Copy Link Button */
+.share-btn-copy {
+  background: #6b7280;
+}
+
+.share-btn-copy:hover {
+  background: #4b5563;
+}
+
+.share-btn-copied {
+  background: #10b981;
+}
+
+.share-btn-copied:hover {
+  background: #059669;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .share-buttons {
+    border-top-color: #374151;
+    border-bottom-color: #374151;
+  }
+
+  .share-buttons-title {
+    color: #f9fafb;
+  }
+}
+
+/* Tablet (< 1024px) */
+@media (max-width: 1024px) {
+  .share-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 768px) {
+  .share-buttons {
+    padding: 24px 0; /* SPACING: 32px → 24px (mobile) */
+    margin: 32px 0; /* SPACING: 40px → 32px (mobile) */
+  }
+
+  .share-buttons-title {
+    font-size: 16px;
+    margin-bottom: 12px; /* SPACING: 16px → 12px (mobile) */
+  }
+
+  .share-buttons-grid {
+    gap: 8px; /* SPACING: 12px → 8px (mobile) */
+  }
+
+  .share-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+
+  .share-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Very small mobile (< 480px) */
+@media (max-width: 480px) {
+  .share-buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .share-btn {
+    justify-content: center;
+  }
+}

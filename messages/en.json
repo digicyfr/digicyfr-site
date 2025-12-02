@@ -8,6 +8,176 @@
     "contact": "Contact",
     "partners": "Partners"
   },
+
+  "about": {
+    "hero": {
+      "title": "About Digicyfr",
+      "subtitle": "Empowering Businesses with Comprehensive Digital Solutions",
+      "description": "We combine technical expertise with business insight to deliver measurable results that drive growth and efficiency."
+    },
+    "whatWeDo": {
+      "title": "What We Do",
+      "description": "We build SEO-optimized websites, digital marketing systems, and full business management platforms — all designed to grow your sales and streamline operations."
+    },
+    "metrics": {
+      "title": "Our Impact",
+      "clients": "10+ Clients Served",
+      "clientsDesc": "From restaurants to retail, we've helped businesses across industries",
+      "projects": "20+ Projects Delivered",
+      "projectsDesc": "Successful implementations that drive real business results",
+      "coverage": "Serving Across Europe",
+      "coverageDesc": "Primary focus on Poland with expanding European presence",
+      "expertise": "Industry-Specific Expertise",
+      "expertiseDesc": "Deep knowledge in food service, retail, and business systems"
+    },
+    "story": {
+      "title": "Our Story",
+      "description": "Digicyfr is a comprehensive digital solutions provider specializing in helping businesses increase their online sales through innovative technology and strategic digital marketing. We combine technical expertise with business insight to deliver measurable results for our clients across multiple industries.",
+      "mission": {
+        "title": "Our Mission",
+        "text": "To empower businesses of all sizes to achieve sustainable growth through accessible, comprehensive digital solutions that drive real results at competitive prices."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "text": "To become the leading digital transformation partner for SMEs across Europe, known for delivering exceptional value and measurable business outcomes."
+      }
+    },
+    "values": {
+      "title": "Our Core Values",
+      "results": {
+        "title": "Results-Driven",
+        "description": "Every solution is designed to deliver measurable business outcomes"
+      },
+      "affordability": {
+        "title": "Affordability",
+        "description": "Professional solutions at prices that make sense for growing businesses"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Staying ahead with the latest technology and best practices"
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "Working closely with clients as long-term growth partners"
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Clear communication and honest advice in all our relationships"
+      }
+    },
+    "advantages": {
+      "title": "Why Choose Digicyfr",
+      "industry": {
+        "title": "Industry-Specific Expertise",
+        "description": "Deep experience in food service, retail, and other sectors"
+      },
+      "comprehensive": {
+        "title": "Comprehensive Solutions",
+        "description": "One partner for all your digital needs"
+      },
+      "pricing": {
+        "title": "Better Prices",
+        "description": "Professional quality without enterprise-level budgets"
+      },
+      "results": {
+        "title": "Results-Focused Approach",
+        "description": "We measure success by your business outcomes"
+      },
+      "partnership": {
+        "title": "Ongoing Partnership",
+        "description": "Support that continues after launch"
+      },
+      "technology": {
+        "title": "Modern Technology Stack",
+        "description": "Proven, cutting-edge technologies"
+      },
+      "local": {
+        "title": "Local Market Understanding",
+        "description": "Deep knowledge of European markets, particularly Poland"
+      }
+    },
+    "process": {
+      "title": "How We Work",
+      "step1": {
+        "title": "Discovery & Planning",
+        "description": "We start by understanding your business, goals, and challenges"
+      },
+      "step2": {
+        "title": "Design & Development",
+        "description": "Creating your solution with regular progress updates"
+      },
+      "step3": {
+        "title": "Launch & Training",
+        "description": "Ensuring smooth launch and empowering your team"
+      },
+      "step4": {
+        "title": "Optimization & Growth",
+        "description": "Our partnership continues with ongoing support"
+      }
+    },
+    "technology": {
+      "title": "Technology We Use",
+      "description": "We use proven, cutting-edge technologies that provide the best balance of power, reliability, and cost-effectiveness."
+    },
+    "clients": {
+      "title": "Trusted by Leading Businesses",
+      "description": "We're proud to partner with successful businesses across various industries."
+    },
+    "cta": {
+      "title": "Ready to Grow Your Business?",
+      "description": "Let's discuss how we can help you achieve your digital transformation goals.",
+      "button": "Start Your Project"
+    }
+  }
+,
+
+  "portfolio": {
+    "hero": {
+      "title": "Our Portfolio",
+      "subtitle": "Client Success Stories",
+      "description": "See how we've helped businesses achieve digital transformation and measurable results."
+    },
+    "filter": {
+      "title": "Filter Projects",
+      "all": "All",
+      "industry": "Filter by Industry",
+      "service": "Filter by Service",
+      "search": "Search projects...",
+      "industries": {
+        "all": "All Industries",
+        "restaurant": "Restaurant & Food",
+        "retail": "Retail & E-commerce",
+        "service": "Service Businesses",
+        "b2b": "Import/Export & B2B"
+      },
+      "services": {
+        "all": "All Services",
+        "web": "Website Development",
+        "seo": "SEO Optimization",
+        "google-business": "Google Business",
+        "erp": "ERP Solutions",
+        "integration": "System Integration"
+      }
+    },
+    "stats": {
+      "title": "Our Impact"
+    },
+    "caseStudy": {
+      "featuredTitle": "Featured Case Studies",
+      "challenge": "The Challenge",
+      "solution": "Our Solution",
+      "results": "Results",
+      "technologies": "Technologies Used"
+    },
+    "industries": {
+      "title": "Industries We Serve"
+    },
+    "cta": {
+      "title": "Ready to Be Our Next Success Story?",
+      "description": "Let's discuss how we can help transform your business with our digital solutions.",
+      "button": "Start Your Project"
+    }
+  },
   "home": {
     "hero": {
       "headline": "Your Business Systems and Marketing in one place",
@@ -85,11 +255,7 @@
       }
     }
   },
-  "about": {
-    "title": "About Digicyfr",
-    "description": "Learn more about our company, mission, and team.",
-    "content": "We are a leading digital agency specializing in web development and digital marketing solutions."
-  },
+ 
   "services": {
     "title": "Our Services",
     "description": "We help companies increase sales through comprehensive digital solutions at better prices",
@@ -152,11 +318,7 @@
       }
     }
   },
-  "portfolio": {
-    "title": "Our Portfolio",
-    "description": "Check out our latest projects and client success stories.",
-    "content": "Explore our portfolio of successful digital projects and satisfied clients."
-  },
+ 
   "management": {
     "title": "Manage Your Business with Ease",
     "subtitle": "Complete digital solutions to streamline your operations and boost productivity",
@@ -193,9 +355,18 @@
     }
   },
   "contact": {
-    "title": "Get In Touch",
-    "description": "Ready to boost your business? Contact us for a free consultation",
+    "title": "Let's Work Together",
+    "description": "Ready to transform your business? Reach out for a free consultation",
+    "responseTime": "We typically respond within 1-2 hours",
     "content": "Ready to start your digital journey? Contact us today!",
+    "trust": {
+      "responseTime": "1-2 Hours",
+      "responseLabel": "Average Response Time",
+      "clients": "10+ Clients",
+      "clientsLabel": "Served Across EU",
+      "success": "100%",
+      "successLabel": "Success Rate"
+    },
     "info": {
       "title": "Contact Information",
       "email": "Email",
@@ -221,17 +392,50 @@
       "message": "Message",
       "send": "Send Message",
       "sending": "Sending...",
+      "helper": "Fill out the form below and we'll get back to you within 1-2 hours",
       "namePlaceholder": "Your full name",
-      "emailPlaceholder": "example@digicyfr.com",
+      "emailPlaceholder": "your-email@example.com",
       "messagePlaceholder": "Tell us about your project and how we can help boost your business...",
       "success": "Message sent successfully! We'll contact you soon.",
       "error": "Failed to send message. Please try again or email us directly at"
     }
   },
   "blog": {
-    "title": "Blog",
-    "description": "Read our latest insights and industry updates.",
-    "content": "Stay updated with the latest trends in digital marketing and web development."
+    "title": "Blog & Resources",
+    "subtitle": "Industry insights, guides, and success stories",
+    "description": "Read our latest insights and industry updates",
+    "readMore": "Read more",
+    "readingTime": "{minutes} min read",
+    "publishedOn": "Published on",
+    "updatedOn": "Updated on",
+    "author": "Author",
+    "category": "Category",
+    "tags": "Tags",
+    "relatedPosts": "Related Posts",
+    "allPosts": "All Posts",
+    "search": "Search articles...",
+    "shareArticle": "Share this article",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!",
+    "categories": {
+      "all": "All Categories",
+      "industry-insights": "Industry Insights",
+      "how-to-guides": "How-to Guides",
+      "success-stories": "Success Stories",
+      "company-news": "Company News"
+    },
+    "filters": {
+      "filterBy": "Filter by",
+      "sortBy": "Sort by",
+      "newest": "Newest First",
+      "oldest": "Oldest First",
+      "popular": "Most Popular"
+    },
+    "empty": {
+      "title": "No posts found",
+      "description": "Try adjusting your filters or search query",
+      "button": "View all posts"
+    }
   },
   "footer": {
     "company": "Digicyfr",
@@ -241,5 +445,12 @@
     "email": "Email: info@digicyfr.com",
     "phone": "Phone: +486950163",
     "copyright": "© 2024 Digicyfr. All rights reserved."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page Not Found",
+    "description": "Oops! The page you're looking for doesn't exist. It might have been moved or deleted.",
+    "buttonHome": "Go Home",
+    "buttonContact": "Contact Us"
   }
 }

@@ -86,9 +86,124 @@
     }
   },
   "about": {
-    "title": "À Propos de Digicyfr",
-    "description": "Découvrez notre entreprise, notre mission et notre équipe.",
-    "content": "Nous sommes une agence numérique de premier plan spécialisée dans le développement web et les solutions de marketing numérique."
+    "hero": {
+      "title": "À Propos de Digicyfr",
+      "subtitle": "Autonomiser les Entreprises avec des Solutions Numériques Complètes",
+      "description": "Nous combinons expertise technique et sens des affaires pour fournir des résultats mesurables qui favorisent la croissance et l'efficacité."
+    },
+    "whatWeDo": {
+      "title": "Ce Que Nous Faisons",
+      "description": "Nous créons des sites web optimisés pour le SEO, des systèmes de marketing numérique et des plateformes complètes de gestion d'entreprise — tous conçus pour augmenter vos ventes et rationaliser les opérations."
+    },
+    "metrics": {
+      "title": "Notre Impact",
+      "clients": "10+ Clients Servis",
+      "clientsDesc": "Des restaurants au commerce de détail, nous avons aidé des entreprises de diverses industries",
+      "projects": "20+ Projets Réalisés",
+      "projectsDesc": "Des implémentations réussies qui génèrent de vrais résultats commerciaux",
+      "coverage": "Service Dans Toute l'Europe",
+      "coverageDesc": "Focus principal sur la Pologne avec une présence européenne en expansion",
+      "expertise": "Expertise Spécifique à l'Industrie",
+      "expertiseDesc": "Connaissance approfondie de la restauration, du commerce de détail et des systèmes d'entreprise"
+    },
+    "story": {
+      "title": "Notre Histoire",
+      "description": "Digicyfr est un fournisseur complet de solutions numériques spécialisé dans l'aide aux entreprises pour augmenter leurs ventes en ligne grâce à une technologie innovante et au marketing numérique stratégique. Nous combinons expertise technique et sens des affaires pour fournir des résultats mesurables à nos clients dans plusieurs industries.",
+      "mission": {
+        "title": "Notre Mission",
+        "text": "Autonomiser les entreprises de toutes tailles pour atteindre une croissance durable grâce à des solutions numériques accessibles et complètes qui génèrent de vrais résultats à des prix compétitifs."
+      },
+      "vision": {
+        "title": "Notre Vision",
+        "text": "Devenir le partenaire principal de transformation numérique pour les PME à travers l'Europe, connu pour fournir une valeur exceptionnelle et des résultats commerciaux mesurables."
+      }
+    },
+    "values": {
+      "title": "Nos Valeurs Fondamentales",
+      "results": {
+        "title": "Axé sur les Résultats",
+        "description": "Chaque solution est conçue pour fournir des résultats commerciaux mesurables"
+      },
+      "affordability": {
+        "title": "Accessibilité",
+        "description": "Solutions professionnelles à des prix adaptés aux entreprises en croissance"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Rester en avance avec les dernières technologies et meilleures pratiques"
+      },
+      "partnership": {
+        "title": "Partenariat",
+        "description": "Travailler en étroite collaboration avec les clients en tant que partenaires de croissance à long terme"
+      },
+      "transparency": {
+        "title": "Transparence",
+        "description": "Communication claire et conseils honnêtes dans toutes nos relations"
+      }
+    },
+    "advantages": {
+      "title": "Pourquoi Choisir Digicyfr",
+      "industry": {
+        "title": "Expertise Spécifique à l'Industrie",
+        "description": "Expérience approfondie dans la restauration, le commerce de détail et d'autres secteurs"
+      },
+      "comprehensive": {
+        "title": "Solutions Complètes",
+        "description": "Un seul partenaire pour tous vos besoins numériques"
+      },
+      "pricing": {
+        "title": "Meilleurs Prix",
+        "description": "Qualité professionnelle sans budgets d'entreprise"
+      },
+      "results": {
+        "title": "Approche Axée sur les Résultats",
+        "description": "Nous mesurons le succès par vos résultats commerciaux"
+      },
+      "partnership": {
+        "title": "Partenariat Continu",
+        "description": "Un soutien qui continue après le lancement"
+      },
+      "technology": {
+        "title": "Stack Technologique Moderne",
+        "description": "Technologies éprouvées et de pointe"
+      },
+      "local": {
+        "title": "Compréhension du Marché Local",
+        "description": "Connaissance approfondie des marchés européens, en particulier la Pologne"
+      }
+    },
+    "process": {
+      "title": "Comment Nous Travaillons",
+      "step1": {
+        "title": "Découverte & Planification",
+        "description": "Nous commençons par comprendre votre entreprise, vos objectifs et vos défis"
+      },
+      "step2": {
+        "title": "Conception & Développement",
+        "description": "Création de votre solution avec des mises à jour régulières de progression"
+      },
+      "step3": {
+        "title": "Lancement & Formation",
+        "description": "Assurer un lancement fluide et autonomiser votre équipe"
+      },
+      "step4": {
+        "title": "Optimisation & Croissance",
+        "description": "Notre partenariat continue avec un soutien continu"
+      }
+    },
+    "technology": {
+      "title": "Technologies Que Nous Utilisons",
+      "description": "Nous utilisons des technologies éprouvées et de pointe qui offrent le meilleur équilibre entre puissance, fiabilité et rentabilité."
+    },
+    "clients": {
+      "title": "Approuvé par des Entreprises Leaders",
+      "description": "Nous sommes fiers de nous associer à des entreprises prospères dans diverses industries."
+    },
+    "cta": {
+      "title": "Prêt à Développer Votre Entreprise?",
+      "description": "Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs de transformation numérique.",
+      "button": "Démarrez Votre Projet"
+    }
   },
   "services": {
     "title": "Nos Services",
@@ -153,9 +268,51 @@
     }
   },
   "portfolio": {
-    "title": "Notre Portfolio",
-    "description": "Découvrez nos derniers projets et nos success stories clients.",
-    "content": "Explorez notre portfolio de projets numériques réussis et de clients satisfaits."
+    "hero": {
+      "title": "Notre Portfolio",
+      "subtitle": "Histoires de Réussite Client",
+      "description": "Découvrez comment nous avons aidé les entreprises à réaliser leur transformation numérique et obtenir des résultats mesurables."
+    },
+    "filter": {
+      "title": "Filtrer les Projets",
+      "all": "Tous",
+      "industry": "Filtrer par Industrie",
+      "service": "Filtrer par Service",
+      "search": "Rechercher des projets...",
+      "industries": {
+        "all": "Toutes les Industries",
+        "restaurant": "Restaurant & Gastronomie",
+        "retail": "Commerce de Détail & E-commerce",
+        "service": "Entreprises de Services",
+        "b2b": "Import/Export & B2B"
+      },
+      "services": {
+        "all": "Tous les Services",
+        "web": "Développement Web",
+        "seo": "Optimisation SEO",
+        "google-business": "Google Business",
+        "erp": "Solutions ERP",
+        "integration": "Intégration Système"
+      }
+    },
+    "stats": {
+      "title": "Notre Impact"
+    },
+    "caseStudy": {
+      "featuredTitle": "Études de Cas en Vedette",
+      "challenge": "Le Défi",
+      "solution": "Notre Solution",
+      "results": "Résultats",
+      "technologies": "Technologies Utilisées"
+    },
+    "industries": {
+      "title": "Industries Que Nous Servons"
+    },
+    "cta": {
+      "title": "Prêt à Devenir Notre Prochaine Success Story?",
+      "description": "Discutons de la façon dont nous pouvons vous aider à transformer votre entreprise avec nos solutions numériques.",
+      "button": "Démarrez Votre Projet"
+    }
   },
   "management": {
     "title": "Gérez votre entreprise en toute simplicité",
@@ -193,9 +350,18 @@
     }
   },
   "contact": {
-    "title": "Contactez-Nous",
-    "description": "Prêt à développer votre entreprise ? Contactez-nous pour une consultation gratuite",
+    "title": "Travaillons Ensemble",
+    "description": "Prêt à transformer votre entreprise ? Contactez-nous pour une consultation gratuite",
+    "responseTime": "Nous répondons généralement dans un délai de 1 à 2 heures",
     "content": "Prêt à commencer votre parcours numérique ? Contactez-nous dès aujourd'hui !",
+    "trust": {
+      "responseTime": "1-2 Heures",
+      "responseLabel": "Temps de Réponse Moyen",
+      "clients": "10+ Clients",
+      "clientsLabel": "Servis Dans l'UE",
+      "success": "100%",
+      "successLabel": "Taux de Réussite"
+    },
     "info": {
       "title": "Informations de Contact",
       "email": "Email",
@@ -221,17 +387,50 @@
       "message": "Message",
       "send": "Envoyer le Message",
       "sending": "Envoi en cours...",
+      "helper": "Remplissez le formulaire ci-dessous et nous vous répondrons dans un délai de 1 à 2 heures",
       "namePlaceholder": "Votre nom complet",
-      "emailPlaceholder": "exemple@digicyfr.com",
+      "emailPlaceholder": "votre-email@example.com",
       "messagePlaceholder": "Parlez-nous de votre projet et comment nous pouvons aider à développer votre entreprise...",
       "success": "Message envoyé avec succès ! Nous vous contacterons bientôt.",
       "error": "Échec de l'envoi du message. Veuillez réessayer ou nous envoyer un email directement à"
     }
   },
   "blog": {
-    "title": "Blog",
-    "description": "Lisez nos dernières analyses et actualités du secteur.",
-    "content": "Restez à jour avec les dernières tendances en marketing numérique et développement web."
+    "title": "Blog & Ressources",
+    "subtitle": "Perspectives sectorielles, guides et histoires de succès",
+    "description": "Lisez nos dernières analyses et actualités du secteur",
+    "readMore": "Lire la suite",
+    "readingTime": "{minutes} min de lecture",
+    "publishedOn": "Publié le",
+    "updatedOn": "Mis à jour le",
+    "author": "Auteur",
+    "category": "Catégorie",
+    "tags": "Tags",
+    "relatedPosts": "Articles connexes",
+    "allPosts": "Tous les articles",
+    "search": "Rechercher des articles...",
+    "shareArticle": "Partager cet article",
+    "copyLink": "Copier le lien",
+    "linkCopied": "Lien copié !",
+    "categories": {
+      "all": "Toutes les catégories",
+      "industry-insights": "Perspectives sectorielles",
+      "how-to-guides": "Guides pratiques",
+      "success-stories": "Histoires de succès",
+      "company-news": "Actualités de l'entreprise"
+    },
+    "filters": {
+      "filterBy": "Filtrer par",
+      "sortBy": "Trier par",
+      "newest": "Plus récents",
+      "oldest": "Plus anciens",
+      "popular": "Plus populaires"
+    },
+    "empty": {
+      "title": "Aucun article trouvé",
+      "description": "Essayez d'ajuster vos filtres ou votre recherche",
+      "button": "Voir tous les articles"
+    }
   },
   "footer": {
     "company": "Digicyfr",
@@ -241,5 +440,12 @@
     "email": "Email: info@digicyfr.com",
     "phone": "Téléphone: +1 (555) 123-4567",
     "copyright": "© 2024 Digicyfr. Tous droits réservés."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page Non Trouvée",
+    "description": "Oups ! La page que vous recherchez n'existe pas. Elle a peut-être été déplacée ou supprimée.",
+    "buttonHome": "Accueil",
+    "buttonContact": "Contactez-nous"
   }
 }

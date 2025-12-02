@@ -1,0 +1,167 @@
+/* src/styles/components/services/service-cta.css */
+
+.service-cta {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-top: 64px; /* From SPACING.md: Section padding: 64px top & bottom */
+  padding-bottom: 64px;
+  background: linear-gradient(135deg, var(--primary) 0%, rgba(37, 99, 235, 0.8) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative element */
+.service-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.service-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.service-cta-container {
+  max-width: 800px; /* From SPACING.md: max width 600-720px, slightly increased */
+  margin: 0 auto;
+  padding: 0 32px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.service-cta-title {
+  font-size: 2.25rem; /* 36px - Large H2 */
+  font-weight: 700;
+  color: white;
+  line-height: 1.3;
+  margin-bottom: 24px; /* From SPACING.md: Title → description: 16-24px */
+}
+
+.service-cta-description {
+  font-size: 1.125rem; /* 18px */
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  margin-bottom: 32px; /* From SPACING.md: Description → button(s): 24-32px */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-cta-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px; /* From SPACING.md: Button groups: 12-16px gap */
+  justify-content: center;
+  align-items: center;
+}
+
+.service-cta-button-primary {
+  padding: 14px 32px;
+  background: white;
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-cta-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-cta-button-secondary {
+  padding: 14px 32px;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-cta-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .service-cta-title {
+    font-size: 2rem; /* 32px */
+  }
+}
+
+@media (max-width: 768px) {
+  .service-cta {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .service-cta-container {
+    padding: 0 24px;
+  }
+
+  .service-cta-title {
+    font-size: 1.75rem; /* 28px */
+  }
+
+  .service-cta-description {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .service-cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .service-cta-button-primary,
+  .service-cta-button-secondary {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-cta {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .service-cta-container {
+    padding: 0 16px;
+  }
+
+  .service-cta-title {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  .service-cta-description {
+    font-size: 0.9375rem; /* 15px */
+  }
+
+  .service-cta-button-primary,
+  .service-cta-button-secondary {
+    padding: 12px 24px;
+    font-size: 0.9375rem;
+  }
+}

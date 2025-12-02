@@ -1,0 +1,115 @@
+/* src/styles/components/portfolio/hero.css - UPDATED */
+.portfolio-hero {
+  padding-top: 120px; /* Increased from 64px to account for fixed header */
+  padding-bottom: 64px;
+  background: linear-gradient(135deg, var(--background) 0%, var(--muted) 100%);
+  position: relative;
+  overflow: hidden;
+  margin-top: 0; /* Ensure no negative margins */
+}
+
+.portfolio-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(37, 99, 235, 0.05) 0%, rgba(37, 99, 235, 0.02) 100%);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  z-index: 1;
+}
+
+.portfolio-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.portfolio-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.portfolio-hero-subtitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.portfolio-hero-description {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Add scroll margin for anchor links */
+.portfolio-hero {
+  scroll-margin-top: 80px; /* Height of your fixed header */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .portfolio-hero {
+    padding-top: 100px; /* Adjusted for tablet */
+  }
+  
+  .portfolio-hero-title {
+    font-size: 3rem;
+  }
+  
+  .portfolio-hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-hero {
+    padding-top: 90px; /* Adjusted for mobile */
+    padding-bottom: 48px;
+  }
+  
+  .portfolio-hero-container {
+    padding: 0 24px;
+  }
+  
+  .portfolio-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .portfolio-hero-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-hero {
+    padding-top: 80px; /* Adjusted for small mobile */
+    padding-bottom: 32px;
+  }
+  
+  .portfolio-hero-container {
+    padding: 0 16px;
+  }
+  
+  .portfolio-hero-title {
+    font-size: 2rem;
+  }
+  
+  .portfolio-hero-subtitle {
+    font-size: 1.125rem;
+  }
+}

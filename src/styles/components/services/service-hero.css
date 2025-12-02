@@ -1,0 +1,173 @@
+/* src/styles/components/services/service-hero.css */
+
+.service-hero {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-top: 120px; /* Account for fixed header */
+  padding-bottom: 64px;
+  background: linear-gradient(135deg,
+    hsl(220, 20%, 97%) 0%,
+    hsl(220, 30%, 95%) 50%,
+    hsl(220, 25%, 96%) 100%);
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+/* Dark mode background */
+@media (prefers-color-scheme: dark) {
+  .service-hero {
+    background: linear-gradient(135deg, var(--background) 0%, var(--muted) 100%);
+  }
+}
+
+/* Decorative element */
+.service-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(45deg,
+    rgba(59, 130, 246, 0.08) 0%,
+    rgba(99, 102, 241, 0.05) 50%,
+    rgba(37, 99, 235, 0.03) 100%);
+  clip-path: polygon(100% 0, 30% 0, 100% 100%);
+  z-index: 1;
+}
+
+.service-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  height: 60%;
+  background: radial-gradient(ellipse at bottom left,
+    rgba(59, 130, 246, 0.06) 0%,
+    transparent 70%);
+  z-index: 1;
+}
+
+.service-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.service-hero-title {
+  font-size: 3.5rem; /* 56px - H1 size */
+  font-weight: 700;
+  color: var(--foreground);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px; /* From SPACING.md: H1 → description: 24px */
+}
+
+.service-hero-subtitle {
+  font-size: 1.75rem; /* 28px - H2 size */
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.service-hero-description {
+  font-size: 1.125rem; /* 18px body text */
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  margin-bottom: 32px; /* From SPACING.md: Description → CTA: 32px */
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-hero-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px; /* From SPACING.md: Button groups: 12–16px gap */
+  justify-content: center;
+  align-items: center;
+}
+
+.service-hero-cta-btn {
+  background: hsl(221, 83%, 53%) !important;
+  color: white !important;
+  font-weight: 600;
+  border: none !important;
+  min-width: 150px; /* reduced from 250px */
+  padding: 1px 6px !important; /* reduced padding */
+  transition: all 0.3s ease;
+}
+
+.service-hero-cta-btn:hover {
+  background: hsl(221, 83%, 48%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .service-hero {
+    padding-top: 100px;
+  }
+
+  .service-hero-title {
+    font-size: 3rem; /* 48px */
+  }
+
+  .service-hero-subtitle {
+    font-size: 1.5rem; /* 24px */
+  }
+}
+
+@media (max-width: 768px) {
+  .service-hero {
+    padding-top: 90px;
+    padding-bottom: 48px;
+  }
+
+  .service-hero-container {
+    padding: 0 24px;
+  }
+
+  .service-hero-title {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  .service-hero-subtitle {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .service-hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-hero {
+    padding-top: 80px;
+    padding-bottom: 32px;
+  }
+
+  .service-hero-container {
+    padding: 0 16px;
+  }
+
+  .service-hero-title {
+    font-size: 2rem; /* 32px */
+  }
+
+  .service-hero-subtitle {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .service-hero-description {
+    font-size: 1rem; /* 16px */
+  }
+}

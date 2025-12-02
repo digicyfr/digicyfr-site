@@ -1,0 +1,145 @@
+/* src/styles/components/about/advantages.css */
+
+.about-advantages {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background: var(--background);
+}
+
+.about-advantages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.about-advantages-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  text-align: center;
+  margin-bottom: 48px;
+  line-height: 1.2;
+}
+
+.about-advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.about-advantage-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-advantage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.about-advantage-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.about-advantage-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.05));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-advantage-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--primary);
+}
+
+.about-advantage-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.about-advantage-description {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-advantages {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  
+  .about-advantages-container {
+    padding: 0 24px;
+  }
+  
+  .about-advantages-title {
+    font-size: 1.75rem;
+    margin-bottom: 32px;
+  }
+  
+  .about-advantages-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .about-advantage-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-advantages-container {
+    padding: 0 16px;
+  }
+  
+  .about-advantages-title {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+  
+  .about-advantage-card {
+    padding: 20px 16px;
+  }
+  
+  .about-advantage-header {
+    gap: 12px;
+  }
+  
+  .about-advantage-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .about-advantage-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .about-advantage-card-title {
+    font-size: 1.125rem;
+  }
+  
+  .about-advantage-description {
+    font-size: 0.9375rem;
+  }
+}

@@ -1,31 +1,55 @@
-//src/app/[locale]/blog/page.tsx
+// src/app/[locale]/blog/page.tsx
 
-'use client';
-import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { getAllPosts } from '@/data/blogPosts';
+import BlogHero from '@/components/blog/BlogHero';
+import BlogList from '@/components/blog/BlogList';
 
-export default function BlogPage() {
-  const t = useTranslations('blog');
+/**
+ * Blog Listing Page
+ *
+ * Phase 3: Complete with BlogHero and BlogList components
+ */
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'blog' });
+
+  return {
+    title: `${t('title')} | Digicyfr`,
+    description: t('subtitle'),
+    alternates: {
+      canonical: `/${locale}/blog`,
+      languages: {
+        en: '/en/blog',
+        pl: '/pl/blog',
+        de: '/de/blog',
+        fr: '/fr/blog',
+      },
+    },
+    openGraph: {
+      title: `${t('title')} | Digicyfr`,
+      description: t('subtitle'),
+      type: 'website',
+      locale,
+    },
+  };
+}
+
+export default async function BlogPage({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'blog' });
+  const posts = getAllPosts();
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {t('title')}
-            </h1>
-            <p className="text-xl text-gray-600">
-              {t('description')}
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              {t('content')}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <main className="blog-page">
+      <BlogHero title={t('title')} subtitle={t('subtitle')} />
+      <BlogList posts={posts} locale={locale} />
+    </main>
   );
 }

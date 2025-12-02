@@ -1,0 +1,114 @@
+/* src/styles/components/portfolio/industries.css */
+.portfolio-industries {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background: linear-gradient(135deg, var(--muted) 0%, var(--background) 100%);
+}
+
+.portfolio-industries-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.portfolio-industries-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  text-align: center;
+  margin-bottom: 48px;
+  line-height: 1.2;
+}
+
+.portfolio-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.portfolio-industry-card {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.portfolio-industry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-industry-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.05));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-industry-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+}
+
+.portfolio-industry-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.portfolio-industry-count {
+  font-size: 0.875rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.portfolio-industry-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .portfolio-industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-industries {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  
+  .portfolio-industries-container {
+    padding: 0 24px;
+  }
+  
+  .portfolio-industries-title {
+    font-size: 1.75rem;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-industries-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .portfolio-industries-container {
+    padding: 0 16px;
+  }
+}

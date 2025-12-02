@@ -42,8 +42,8 @@ export default function Footer() {
               <Image
                 src="/images/logodigi.webp"
                 alt="Digicyfr"
-                width={120} // Reduced from 150
-                height={32} // Reduced from 40 (maintaining 3.75:1 aspect ratio)
+                width={160}
+                height={48}
                 className="footer-logo-img"
               />
             </Link>

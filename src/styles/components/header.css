@@ -26,6 +26,7 @@
   align-items: center;
   gap: 2rem;
 }
+
 /* Logo */
 .header-logo {
   display: flex;
@@ -42,74 +43,11 @@
 
 .logo-image {
   width: auto;
-  height: 35px; /* Fixed height for consistent sizing */
+  height: 70px;
   object-fit: contain;
 }
 
-/* Update mobile breakpoints */
-@media (max-width: 768px) {
-  .header {
-    height: 70px;
-  }
-
-  .header-container {
-    padding: 0 1rem;
-  }
-
-  .header-nav {
-    gap: 1rem;
-  }
-
-  .logo-image {
-    height: 28px; /* Smaller on mobile */
-  }
-
-  .header-actions {
-    gap: 0.75rem;
-  }
-
-  .mobile-menu-button {
-    padding: 0.4rem;
-  }
-
-  .mobile-menu-button svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-container {
-    padding: 0 0.75rem;
-  }
-
-  .header-nav {
-    gap: 0.75rem;
-  }
-
-  .logo-image {
-    height: 25px; /* Even smaller on very small screens */
-  }
-
-  .header-actions {
-    gap: 0.5rem;
-  }
-
-  .mobile-menu-content {
-    padding: 1rem 1rem;
-  }
-
-  .mobile-link {
-    font-size: 0.9rem;
-    padding: 0.875rem 0;
-  }
-
-  .mobile-link.contact-link {
-    margin-top: 0.5rem;
-    padding: 0.625rem 1.25rem;
-    font-size: 0.9rem;
-  }
-}/* Desktop Navigation Links - Main Menu */
+/* Desktop Navigation Links - Main Menu */
 .nav-links-main {
   display: flex;
   gap: 2.5rem;
@@ -127,6 +65,10 @@
   position: relative;
   padding: 0.5rem 0;
   white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .nav-link:hover {
@@ -146,6 +88,47 @@
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+/* Services Dropdown */
+.services-dropdown-container {
+  position: relative;
+}
+
+.services-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.services-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  min-width: 220px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  margin-top: 0.5rem;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-link:hover {
+  background: var(--muted);
+  color: var(--primary);
 }
 
 /* Right End - Language Switcher + Contact CTA */
@@ -260,6 +243,80 @@
   color: var(--primary-foreground);
 }
 
+/* Mobile Services Section */
+.mobile-services-section {
+  margin: 0.5rem 0;
+}
+
+.mobile-services-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--foreground);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-services-header:hover {
+  color: var(--primary);
+}
+
+.mobile-services-icon {
+  transition: transform 0.3s ease;
+}
+
+.mobile-services-icon.open {
+  transform: rotate(180deg);
+}
+
+.mobile-services-links {
+  display: flex;
+  flex-direction: column;
+  background: var(--muted);
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.mobile-services-links.open {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 0.5rem;
+}
+
+.mobile-service-link {
+  text-decoration: none;
+  color: var(--foreground);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.mobile-service-link:last-child {
+  border-bottom: none;
+}
+
+.mobile-service-link:hover {
+  background: var(--background);
+  color: var(--primary);
+}
+
 /* Animation */
 @keyframes slideDown {
   from {
@@ -298,8 +355,8 @@
   }
 
   .logo-image {
-    max-width: 100px;
-    max-height: 35px;
+    max-width: 120px;
+    max-height: 45px;
   }
 
   .header-actions {
@@ -326,8 +383,8 @@
   }
 
   .logo-image {
-    max-width: 90px;
-    max-height: 32px;
+    max-width: 110px;
+    max-height: 42px;
   }
 
   .header-actions {
@@ -343,6 +400,16 @@
     padding: 0.875rem 0;
   }
 
+  .mobile-services-header {
+    font-size: 0.9rem;
+    padding: 0.875rem 0;
+  }
+
+  .mobile-service-link {
+    font-size: 0.85rem;
+    padding: 0.625rem 0.75rem;
+  }
+
   .mobile-link.contact-link {
     margin-top: 0.5rem;
     padding: 0.625rem 1.25rem;
@@ -356,8 +423,8 @@
   }
 
   .logo-image {
-    max-width: 80px;
-    max-height: 30px;
+    max-width: 100px;
+    max-height: 38px;
   }
 
   .header-actions {

@@ -35,12 +35,12 @@
 .footer-logo {
   display: inline-block;
   margin-bottom: 20px;
-  min-height: 32px; /* Reduced from 40px */
+  min-height: 48px;
 }
 
 .footer-logo-img {
   width: auto;
-  height: 32px; /* Fixed height for consistent sizing */
+  height: 70px;
   object-fit: contain;
 }
 
@@ -226,7 +226,7 @@
   }
 
   .footer-logo-img {
-    height: 28px; /* Smaller on mobile */
+    height: 42px;
   }
 
   .footer-description {
@@ -278,7 +278,7 @@
   }
 
   .footer-logo-img {
-    height: 26px; /* Even smaller on very small screens */
+    height: 40px;
   }
 
   .footer-social {
@@ -328,7 +328,7 @@
   }
 
   .footer-logo-img {
-    height: 24px; /* Smallest size for very small screens */
+    height: 36px;
   }
 
   .social-link {

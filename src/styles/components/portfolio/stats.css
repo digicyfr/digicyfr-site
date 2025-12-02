@@ -1,0 +1,121 @@
+/* src/styles/components/portfolio/stats.css */
+.portfolio-stats {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background: var(--background);
+}
+
+.portfolio-stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.portfolio-stats-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  text-align: center;
+  margin-bottom: 48px;
+  line-height: 1.2;
+}
+
+.portfolio-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.portfolio-stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.portfolio-stat-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.05));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-stat-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+}
+
+.portfolio-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.portfolio-stat-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.portfolio-stat-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .portfolio-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-stats {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  
+  .portfolio-stats-container {
+    padding: 0 24px;
+  }
+  
+  .portfolio-stats-title {
+    font-size: 1.75rem;
+    margin-bottom: 32px;
+  }
+  
+  .portfolio-stat-card {
+    padding: 20px 16px;
+  }
+  
+  .portfolio-stat-value {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .portfolio-stats-container {
+    padding: 0 16px;
+  }
+}

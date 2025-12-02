@@ -1,7 +1,8 @@
+// src/components/common/Header.tsx
 'use client';
 
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
@@ -15,6 +16,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -53,11 +56,33 @@ export default function Header() {
   // Close mobile menu when clicking on a link
   const handleMobileLinkClick = () => {
     setIsMenuOpen(false);
+    setMobileServicesOpen(false);
+  };
+
+  const toggleServicesDropdown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setServicesOpen(!servicesOpen);
+  };
+
+  const closeServicesDropdown = () => {
+    setServicesOpen(false);
+  };
+
+  const toggleMobileServices = () => {
+    setMobileServicesOpen(!mobileServicesOpen);
   };
 
   if (!mounted) {
     return null;
   }
+
+  const services = [
+    { name: 'SEO Optimization', path: '/services/seo-optimization' },
+    { name: 'Google Business Management', path: '/services/google-business-management' },
+    { name: 'Website Development', path: '/services/website-development' },
+    { name: 'ERP & Business Tools', path: '/services/erp-business-tools' },
+    { name: 'System Integration', path: '/services/system-integration' },
+  ];
 
   return (
     <header className="header">
@@ -68,8 +93,8 @@ export default function Header() {
             <Image
               src="/images/logodigi.webp"
               alt="Digicyfr"
-              width={100} // Reduced from 120
-              height={33} // Reduced from 40 (maintaining 3:1 aspect ratio)
+              width={150}
+              height={56}
               priority
               className="logo-image"
             />
@@ -78,18 +103,54 @@ export default function Header() {
           {/* Desktop Navigation - Main Menu */}
           {!isMobile && (
             <div className="nav-links-main">
-              <a href="#home" className="nav-link">
+              {/* Change from <a href="#home"> to <Link> for Home */}
+              <Link href={`/${locale}`} className="nav-link">
                 {t('home').toUpperCase()}
-              </a>
-              <a href="#services" className="nav-link">
-                {t('services').toUpperCase()}
-              </a>
-              <a href="#portfolio" className="nav-link">
+              </Link>
+              
+              {/* Services Dropdown */}
+              <div className="services-dropdown-container">
+                <button 
+                  className="nav-link services-dropdown-trigger"
+                  onClick={toggleServicesDropdown}
+                  onMouseEnter={() => setServicesOpen(true)}
+                >
+                  {t('services').toUpperCase()}
+                  <ChevronDown size={16} />
+                </button>
+                {servicesOpen && (
+                  <div 
+                    className="services-dropdown"
+                    onMouseLeave={closeServicesDropdown}
+                  >
+                    {services.map((service, index) => (
+                      <Link
+                        key={index}
+                        href={`/${locale}${service.path}`}
+                        className="dropdown-link"
+                        onClick={closeServicesDropdown}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
+              {/* Change from <a href="#portfolio"> to <Link> for Portfolio */}
+              <Link href={`/${locale}/portfolio`} className="nav-link">
                 {t('portfolio').toUpperCase()}
-              </a>
-              <a href="#about" className="nav-link">
+              </Link>
+              
+              {/* Change from <a href="/about"> to <Link> for About */}
+              <Link href={`/${locale}/about`} className="nav-link">
                 {t('about').toUpperCase()}
-              </a>
+              </Link>
+
+              {/* Blog Link */}
+              <Link href={`/${locale}/blog`} className="nav-link">
+                {t('blog').toUpperCase()}
+              </Link>
             </div>
           )}
 
@@ -99,7 +160,7 @@ export default function Header() {
               <>
                 <ThemeToggle />
                 <LanguageSwitcher />
-                <a href="#contact" className="contact-button">
+                <a href={`/${locale}#contact`} className="contact-button">
                   {t('contact').toUpperCase()}
                 </a>
               </>
@@ -127,41 +188,67 @@ export default function Header() {
       {isMobile && isMenuOpen && (
         <div className="mobile-menu">
           <div className="mobile-menu-content">
-            <a
-              href="#home"
+            {/* Change from <a href="#home"> to <Link> for Home */}
+            <Link
+              href={`/${locale}`}
               onClick={handleMobileLinkClick}
               className="mobile-link"
             >
               {t('home').toUpperCase()}
-            </a>
-            <a
-              href="#services"
-              onClick={handleMobileLinkClick}
-              className="mobile-link"
-            >
-              {t('services').toUpperCase()}
-            </a>
-            <a
-              href="#portfolio"
+            </Link>
+            
+            {/* Mobile Services Submenu */}
+            <div className="mobile-services-section">
+              <button
+                className="mobile-services-header"
+                onClick={toggleMobileServices}
+              >
+                <span>{t('services').toUpperCase()}</span>
+                <ChevronDown
+                  size={20}
+                  className={`mobile-services-icon ${mobileServicesOpen ? 'open' : ''}`}
+                />
+              </button>
+              <div className={`mobile-services-links ${mobileServicesOpen ? 'open' : ''}`}>
+                {services.map((service, index) => (
+                  <Link
+                    key={index}
+                    href={`/${locale}${service.path}`}
+                    onClick={handleMobileLinkClick}
+                    className="mobile-service-link"
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            
+            {/* Change from <a href="#portfolio"> to <Link> for Portfolio */}
+            <Link
+              href={`/${locale}/portfolio`}
               onClick={handleMobileLinkClick}
               className="mobile-link"
             >
               {t('portfolio').toUpperCase()}
-            </a>
-            <a
-              href="#about"
+            </Link>
+            
+            {/* Change from <a href="#about"> to <Link> for About */}
+            <Link
+              href={`/${locale}/about`}
               onClick={handleMobileLinkClick}
               className="mobile-link"
             >
               {t('about').toUpperCase()}
-            </a>
-            <a
-              href="#contact"
+            </Link>
+
+            {/* Blog Link */}
+            <Link
+              href={`/${locale}/blog`}
               onClick={handleMobileLinkClick}
-              className="mobile-link contact-link"
+              className="mobile-link"
             >
-              {t('contact').toUpperCase()}
-            </a>
+              {t('blog').toUpperCase()}
+            </Link>
           </div>
         </div>
       )}
